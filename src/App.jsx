@@ -10,7 +10,7 @@ import Subbscribe from '../Frontend/Subbscribe';
 
 
 // Frontend components
-
+import Chatbot from '../Frontend/chat/Chatbot';  // Adjust the path if necessary
 import Men from '../Frontend/Men';
 import Women from '../Frontend/Women';
 import Best from '../Frontend/Best';
@@ -131,6 +131,7 @@ function App() {
 
 
             {/*main files*/}
+            <Route path='/chatbot' element={<Chatbot />} />
             <Route path='/ulogin' element={<Sidep/>}/>
               <Route path='/login' element={<ULog />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />

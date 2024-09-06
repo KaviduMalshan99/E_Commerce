@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const admin = require("firebase-admin");
 const router = require('./router');
+const chatbotRoutes = require('./chatbotRoutes'); // Import chatbot routes
 
 // Firebase Admin Initialization
 const credentials = require("./util/firebase/credentials.json");
@@ -16,8 +17,8 @@ admin.initializeApp({
 });
 
 // File Upload Setup
-const upload = multer({ 
-  dest: 'uploads/', 
+const upload = multer({
+  dest: 'uploads/',
   limits: { fileSize: 20 * 1024 * 1024 } // Limit set to 20MB
 });
 
@@ -49,12 +50,13 @@ const connect = async () => {
 
 connect();
 
-// API Routes
+// API Routes for File Upload
 app.post('/api/upload', upload.single('image'), (req, res) => {
   const filePath = req.file.path;
   res.json({ filePath });
 });
 
+// API Routes for Sending Emails
 app.post('/send-email', async (req, res) => {
   const { email, subject, message } = req.body;
 
@@ -69,7 +71,7 @@ app.post('/send-email', async (req, res) => {
   });
 
   let mailOptions = {
-    from: '"WellWorn Private Limited" <tracking@wellworn.lk>', // update this
+    from: '"WellWorn Private Limited" <tracking@wellworn.lk>',
     to: email,
     subject: subject,
     text: message
@@ -98,7 +100,7 @@ app.post('/send-faq', async (req, res) => {
   });
 
   let mailOptions = {
-    from: '"WellWorn Private Limited" <faq@wellworn.lk>', // update this
+    from: '"WellWorn Private Limited" <faq@wellworn.lk>',
     to: email,
     subject: subject,
     text: message
@@ -113,19 +115,17 @@ app.post('/send-faq', async (req, res) => {
   }
 });
 
-
-
-
-// Additional Routes
+// API Route for Google Authentication
 app.post('/auth/google', async (req, res) => {
   const { token } = req.body;
   res.json({ user: 'user data', token: 'user session token' });
 });
 
-
-
-// Apply Routes
+// Apply additional routes
 app.use('/api', router);
+
+// Apply Chatbot Routes
+app.use('/api', chatbotRoutes); // Register chatbot routes
 
 // Start Server
 const PORT = process.env.PORT || 3001;
