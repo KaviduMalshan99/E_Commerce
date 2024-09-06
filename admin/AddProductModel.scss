@@ -1,0 +1,486 @@
+$color_1: #fff;
+$background-color_1: #07223D;
+$background-color_2: red;
+
+.ProductModelContainer{
+
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+    width: 65%;
+    margin-top: 25px;
+    overflow-y: scroll;
+    height: 90%;
+
+    
+    h1{
+        font-size: 25px;
+        text-align: center;
+        margin: 15px 0 15px 0;
+    }
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    form {
+        margin-left: 25px;
+
+        .boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .mainbox {
+                input {
+                    margin-left: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    height: 30px;
+                    padding-left: 10px;
+                    width: 400px;
+                }
+
+                .color-section {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .image-container {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+
+                    .imh {
+                        width: calc(35% - 40px); // Subtract gap from the width
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-bottom: 25px;
+                        
+                        img {
+                            max-width: 100%; // Ensures the image fits within the container
+                            height: auto; // Maintains the aspect ratio
+                        }
+
+                        button {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                .imagess {
+                    input {
+                        margin-left: 5%;
+                        margin-top: 20px;
+                    }
+                }
+
+                .sizes {
+                    display: flex;
+                }
+
+                .size-item {
+                    margin-top: 30px;
+                    display: flex;
+                    gap: 20px;
+
+                    button {
+                        height: 30px;
+                        margin-top: 0px;
+                    }
+                }
+
+            }
+
+            .last {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+
+                button {
+                    width: auto;
+                    height: 45px;
+                    margin-top: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: $background-color_1;
+                    color: $color_1;
+                    font-weight: bold;
+                    font-size: 18px;
+                    padding: 5px 20px;
+                }
+
+                .EDTcancel {
+                    background-color: $background-color_2;
+                    margin-left: 38%;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    padding: 5px 20px;
+                }
+            }
+
+            button {
+                width: 150px;
+                height: 45px;
+                margin-top: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: $background-color_1;
+                color: $color_1;
+                font-weight: bold;
+                padding: 5px 20px;
+            }
+        }
+
+        
+
+        .variants {
+            display: flex;
+            flex-direction: row; // Allows the items to wrap to the next line
+            gap: 20px; 
+            
+
+            > div.variant { 
+                display: flex;
+                align-items: flex-start;
+                padding: 10px;
+                border: 1px solid #ccc; 
+                border-radius: 10px; 
+                background-color: #ccc;
+                margin-top: 70px;
+                
+
+                h4{
+                    margin-left: 30%;
+                }
+
+                img {
+                    max-width: 100%; 
+                    height: auto; 
+                    margin-top: 10px; 
+                }
+
+                button {
+                    margin-top: 10px; 
+                    padding: 5px 10px; 
+                    color: white; 
+                    border: none; 
+                    border-radius: 5px; 
+                    cursor: pointer; 
+                    margin-left: 15%;
+                }
+            }
+        }
+
+        .variantslect{
+            select{
+                margin-left: 20px;
+                border-radius: 5px;
+                width: 65%;
+            }
+        }
+
+        .manysizemanycolor{
+            margin-top: 20px;
+            margin-left: 5%;
+            
+            .mzdiv{
+
+                margin-left: 5%;
+                margin-top: 20px;
+
+
+                input{
+                    margin-left: 40px;
+                    width: 50%;
+                    border-radius: 5px;
+                }
+    
+                button{
+                    margin-left: 25%;
+                }
+
+                select{
+                    border-radius: 5px;
+                    width: 50%;
+                    margin-left: 4.5%;
+                    border: 2px solid;
+                }
+
+                .imageinput{
+                    background: none;
+                }
+
+                .imgdiv{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 35px;
+
+                    img{
+                        height: 150px;
+                        width: 150px;
+                        margin-left: 45%;
+                        border-radius: 5px;
+                    }
+                }
+
+            }
+
+            
+        }
+
+        .variants {
+            display: flex;
+            flex-wrap: wrap; // Allows the items to wrap to the next line
+            gap: 20px; 
+          
+            .size-item { 
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 10px;
+              border: 1px solid #ccc; 
+              border-radius: 10px; 
+              background-color: #ccc;
+              margin-top: 20px; 
+              margin-left: 25px;
+          
+              span {
+                margin-bottom: 5px; // Adjust spacing between spans
+              }
+          
+              img {
+                width: 200px;
+                height: 200px; 
+                margin-top: 10px; 
+                border-radius: 5px;
+              }
+          
+              button {
+                margin-top: 10px; 
+                padding: 5px 10px; 
+                color: white; 
+                background-color: #07223D; // Change button background color
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                margin-left: 13%;
+              }
+            }
+          }
+          
+
+        .onlycolors{
+
+            div{
+                margin-left: 5%;
+
+                input{
+                    margin-left: 5%;
+                    width: 60%;
+                    border-radius: 5px;
+                }
+
+                .addbutton{
+                    margin-left: 41.5%;
+                }
+
+                .imgs{
+
+                    img{
+                        height: 150px;
+                        width: 150px;
+                        margin-left: 35%;
+                    }
+
+                    .rmv{
+                        margin-left: 35%;
+                        background-color: $background-color_2;
+                    }
+                }
+            }
+
+            .sd2 {
+                display: flex;
+                flex-direction: row; // Allows the items to wrap to the next line
+                gap: 20px; 
+              
+                .size-item { 
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  padding: 10px;
+                  border: 1px solid #ccc; 
+                  border-radius: 10px; 
+                  background-color: #ccc;
+                  margin-top: 20px; 
+                  margin-left: 25px;
+                  width: 25%;
+              
+                  span {
+                    margin-bottom: 5px; // Adjust spacing between spans
+                  }
+              
+                  img {
+                    width: 200px;
+                    height: 200px; 
+                    margin-top: 10px; 
+                    border-radius: 5px;
+                  }
+              
+                  button {
+                    margin-top: 10px; 
+                    padding: 5px 10px; 
+                    color: white; 
+                    background-color: $background-color_2; // Change button background color
+                    border: none; 
+                    border-radius: 5px; 
+                    cursor: pointer; 
+                    margin-left: 18%;
+                  }
+                }
+              }
+
+            
+        }
+
+        .mainbox--quickdelivary{
+            margin-top: 20px;
+            
+            .dilevary{
+               
+                input{
+                    
+                    height: 20px;
+                    margin-top: -35px;
+                }
+            }
+        }
+
+        .mainbox-areas{
+            margin-top: 20px;
+
+            .catdiv{
+
+                display: flex;
+                flex-direction: row;
+                margin-left: 40px;
+                align-items: center;
+                
+            }
+            
+            select{
+                height: 40px;
+                width: 60%;
+            }
+
+            button{
+                margin-top: -10px;
+                height: 40px;
+            }
+        }
+
+        .selectedareas{
+            margin-left: 20%;
+            margin-top: 20px;
+
+            ul{
+                display: flex;
+                gap: 50px;
+                list-style: circle;
+
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                    
+
+                    button{
+                        height: 30px;
+                        width: 100px;
+                    }
+                }
+            }
+
+
+        }
+
+        .desc{
+            margin-top: 25px;
+
+            textarea{
+                margin-left: 5%;
+                width: 90%;
+                height: 200px;
+                padding: 20px;
+            }
+        }
+
+        .mmainbox-desc{
+            margin-top: 25px;
+
+            .imagecon{
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+
+                .imh{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 5%;
+                    gap: 10px;
+
+
+                    .dimg{
+                        height: 150px;
+                        width: 150px;
+                        border-radius: 5px;
+                    }
+                    
+                    .dremove{
+                        height: 40px;
+                    }
+                }
+
+                
+
+                
+            }
+
+            .dfile{
+                margin-top: 25px;
+                margin-left: 8%;
+                background: none;
+            }
+
+
+            
+        }
+    }
+
+    .submitconntainer{
+
+        .editsave {
+            width: 300px;
+            height: 45px;
+            border: none;
+            border-radius: 5px;
+            background-color: $background-color_1;
+            color: $color_1;
+            font-weight: bold;
+            padding: 5px 20px;
+            margin-left: 40%;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+    }
+}
+

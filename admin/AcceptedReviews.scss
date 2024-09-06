@@ -1,0 +1,168 @@
+$color_1: white;
+$color_2: #fff;
+$color_3: black;
+$background-color_1: #07223D;
+$background-color_2: #F7FBFE;
+$background-color_3: red;
+$background-color_4: #fff;
+$background-color_5: white;
+$background-color_6: black;
+
+.productnav{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 200px;
+	background-color: $background-color_1;
+	color: $color_1;
+	&:hover{
+		background-color: $background-color_3;
+		color: $color_1;
+	}
+}
+
+.AcceptedReviews_main {
+	position: relative;
+}
+.AcceptedReviews_table {
+	width: 99%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	background-color: $background-color_1;
+	border-radius: 10px;
+	th {
+		padding: 8px;
+		text-align: center;
+		background-color: $background-color_1;
+		color: $color_1;
+		border-radius: 10px 10px 0 0;
+	}
+	td {
+		padding: 8px;
+		text-align: center;
+		background-color: $background-color_2;
+		border: 1px solid #07223D;
+	}
+}
+.View_Review {
+	padding: 5px 20px;
+	background-color: $background-color_3;
+	color: $color_2;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.popupreviewform {
+	position: absolute;
+	top:180%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: $background-color_4;
+	padding: 30px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	width: 600px;
+	height: 700px;
+	max-width: 400%;
+	max-height: 600%;
+	overflow-y: auto;
+	h2 {
+		text-align: center;
+	}
+	h3 {
+		margin: 10px 10px 10px 20px;
+	}
+	form {
+		max-width: 100%;
+	}
+	.reviewform-element {
+		margin: 25px 0px 10px;
+		label {
+			font-size: 15px;
+			font-weight: lighter;
+			color: $color_3;
+			margin: 0px 0px 0px 30px;
+		}
+		input {
+			margin: 0px 0px 0px 30px;
+			margin-top: 10px;
+			display: block;
+			width: calc(100% - 60px);
+			padding: 10px;
+			outline: none;
+			border: 1px solid gray;
+			border-radius: 5px;
+		}
+		img {
+			display: block;
+			margin: 10px 30px;
+			width: 100px;
+			height: 100px;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		}
+	}
+	.ratingstars {
+		display: flex;
+		align-items: center;
+		grid-gap: .2rem;
+		font-size: 1.25rem;
+		color: $color_3;
+		margin-bottom: 2rem;
+		margin-left: 30px;
+	}
+	textarea {
+		margin: 0px 0px 0px 30px;
+		margin-top: 10px;
+		display: block;
+		width: calc(100% - 60px);
+		padding: 10px;
+		outline: none;
+		border: 1px solid gray;
+		border-radius: 5px;
+	}
+}
+// .review-btn-container {
+// 	margin-top: 50px;
+// 	display: flex;
+// 	justify-content: space-between;
+// }
+
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 16px;
+	height: 16px;
+	background-color: $background-color_5;
+	color: $color_3;
+	text-align: center;
+	line-height: 16px;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.review-images-container {
+	display: flex;
+	justify-content: flex-start; /* Align images from start to end horizontally */
+	flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+	margin-left: 30px; /* Adjust spacing if necessary */
+  }
+  
+  .review-images-container img {
+	margin-right: 10px; /* Add space between images */
+	margin-bottom: 10px; /* Add vertical spacing between rows */
+	max-width: 100px;
+	max-height: 100px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+.Remove-btn{
+	.btn3{
+		margin-left: 100px;
+	}
+}
+  

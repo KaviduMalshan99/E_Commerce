@@ -1,0 +1,180 @@
+/* .chatOrderIdSearch{
+    
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width:80%;
+ 
+ 
+
+}
+
+.chatOrderIdsearch-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+ 
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 30%;
+ 
+
+}
+
+.chatOrderIdsearch-bar input {
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  width: 300px; 
+}
+
+.CustomerChat {
+  display: flex;
+  justify-content: space-between;
+  max-width:80%;
+  margin-left: 5%;
+}
+
+
+.order-list {
+  flex: 1;
+  width: 30%;
+  border: 1px solid #000000;
+  padding: 20px;
+}
+
+.order-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #000000;
+  padding: 10px;
+}
+
+.order-card {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  position: relative; 
+ 
+}
+
+
+.chat-box {
+  flex: 2;
+  width: 65%;
+  border: 1px solid #000000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height:500px;
+}
+
+.message-container {
+  border: 1px solid #000000;
+  padding: 10px;
+  width: calc(100% - 20px);
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  width: 250px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+  align-self: flex-start;
+}
+
+.admin-message {
+  width: 250px; 
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+  color: #000000;
+  align-self: flex-end;
+  margin-right: 10px;
+}
+
+.message-content {
+  width: 200px;
+  background-color: aqua;
+   margin-left: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  
+}
+
+
+.message-sender {
+  font-weight: bold;
+}
+
+.admin-container {
+  width: 70%;
+  margin: 20px;
+}
+
+.input-container {
+  display: flex;
+  margin-top: 20px;
+  width: calc(100% - 20px);
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.input-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #000810;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.massageEdit{
+  size: 40px;
+    padding: 15px 25px;
+    background-color: #d9d9d9;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-image: url('./../src/assets/edit_icon.png'); 
+    background-size:contain;
+   
+
+}
+
+.massageDelete {
+    
+    
+background-color: #d9d9d9;
+background-color: transparent;
+color: #fff;
+border:none;
+cursor: pointer;
+margin-left: 10px;
+border-radius: 10px;
+background-image: url('./../src/assets/delete_icon.png'); 
+
+
+} */

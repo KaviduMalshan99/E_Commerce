@@ -1,0 +1,160 @@
+$color_1: #fff;
+$color_2: white;
+$background-color_1: #07223D;
+$background-color_2: #F7FBFE;
+$background-color_3: #f2f2f2;
+$background-color_4: #ddd;
+$background-color_5: #4CAF50;
+$background-color_6: #45a049;
+$background-color_7: #f44336;
+$background-color_8: #da190b;
+
+.ProductContainer {
+
+  .productsecondiv {
+
+    .PRODUCTTITLE {
+      font-size: 22px;
+      margin-left: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .report-button {
+      width: 20%;
+      margin-left: 79%;
+      height: 50px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    p {
+      margin-left: 15px;
+      font-weight: 500;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      margin-left: 23.5%;
+      width: 75%;
+      margin-bottom: 5px;
+      background-color: #ebe9e9;
+
+      .search-button {
+        margin-top: -10px;
+        &:hover {
+          background: #07223D;
+        }
+      }
+    }
+
+    .addProductSection {
+
+      button {
+        border: none;
+        width: 20%;
+        margin-left: 79%;
+        padding: 15px 0 15px 0;
+        border-radius: 10px;
+        background-color: $background-color_1;
+        color: $color_1;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      i {
+        padding-right: 10px;
+      }
+
+      .PRODUCTGenarate {
+        border: none;
+        width: 20%;
+        margin-top: 10px;
+        padding: 15px 0 15px 0;
+        border-radius: 10px;
+        background-color: $background-color_1;
+        color: $color_1;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 5px;
+        &:hover {
+          background: #07223D;
+        }
+      }
+    }
+
+    .product-count {
+      margin-left: 1.5%;
+    }
+
+    .product-table-container {
+      width: 98%;
+      margin: 20px auto;
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        background-color: $background-color_1;
+      }
+      th {
+        background-color: $background-color_1;
+        color: $color_2;
+        border-radius: 10px 10px 0 0;
+        height: 50px;
+      }
+      td {
+        background-color: $background-color_2;
+        border: 1px solid #07223D;
+        text-align: center;
+        padding: 10px 0 10px 0;
+        img {
+          height: 200px;
+          width: 200px;
+        }
+      }
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: $background-color_3;
+          }
+          &:hover {
+            background-color: $background-color_4;
+          }
+        }
+      }
+      .edit-btn {
+        margin: 0 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100px;
+        height: 40px;
+        padding: 0;
+        background-color: $background-color_5;
+        color: $color_2;
+        &:hover {
+          background-color: $background-color_6;
+        }
+      }
+      .delete-btn {
+        margin: 0 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100px;
+        height: 40px;
+        padding: 0;
+        background-color: $background-color_7;
+        color: $color_2;
+        &:hover {
+          background-color: $background-color_8;
+        }
+      }
+    }
+
+    
+  }
+}

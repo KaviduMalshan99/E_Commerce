@@ -1,0 +1,66 @@
+.categorytable  table{
+    width: 99%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #07223D;
+    border-radius: 10px;
+  }
+  
+  .categorytable th, .categorytable td {
+    
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .categorytable th {
+    background-color: #07223D;
+    color: white;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .categorytable td{
+    background-color: #F7FBFE;
+    border: 1px solid #07223D;
+  }
+  
+  .categorytable .deletebtn {
+    padding: 5px 10px 5px 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .categorytable .CATeditbtn {
+    padding: 5px 20px 5px 20px;
+    background-color: #07223D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .categorytable .CATupdatebtn{
+    padding: 5px 20px 5px 20px;
+    background-color: #07223D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .categorytable .CATcancelbtn{
+    padding: 5px 10px 5px 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .categorytable .CATedittext{
+    width: 300px;
+    margin-bottom: 0px;
+  }
+  

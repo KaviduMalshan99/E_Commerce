@@ -1,0 +1,285 @@
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  
+    form {
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+  
+      input,
+      textarea {
+        margin-top: 5px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+  
+      .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+  
+        .product-details {
+          display: flex;
+          flex-direction: column;
+          flex: 1 0 45%; /* Take up 45% of the width of the container */
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 10px;
+          background-color: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+          label {
+            margin-top: 5px;
+          }
+  
+          input {
+            margin-top: 3px;
+          }
+  
+          .product-image-container {
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            position: relative;
+  
+            .product-image {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Responsive Design */
+  /* Small phones: max-width: 320px */
+  @media (max-width: 320px) {
+    .form-container {
+      padding: 10px;
+  
+      form {
+        label {
+          font-size: 14px;
+        }
+  
+        input,
+        textarea {
+          font-size: 14px;
+          padding: 8px;
+        }
+  
+        .products-container {
+          flex-direction: column;
+  
+          .product-details {
+            flex: 1 0 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Medium phones: max-width: 375px */
+  @media (max-width: 375px) {
+    .form-container {
+      padding: 10px;
+  
+      form {
+        label {
+          font-size: 14px;
+        }
+  
+        input,
+        textarea {
+          font-size: 14px;
+          padding: 8px;
+        }
+  
+        .products-container {
+          flex-direction: column;
+  
+          .product-details {
+            flex: 1 0 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Large phones: max-width: 425px */
+  @media (max-width: 425px) {
+    .form-container {
+      padding: 15px;
+  
+      form {
+        label {
+          font-size: 15px;
+        }
+  
+        input,
+        textarea {
+          font-size: 15px;
+          padding: 9px;
+        }
+  
+        .products-container {
+          flex-direction: column;
+  
+          .product-details {
+            flex: 1 0 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Small tablets: max-width: 600px */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 20px;
+  
+      form {
+        label {
+          font-size: 16px;
+        }
+  
+        input,
+        textarea {
+          font-size: 16px;
+          padding: 10px;
+        }
+  
+        .products-container {
+          flex-direction: column;
+  
+          .product-details {
+            flex: 1 0 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Large tablets: max-width: 768px */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 20px;
+  
+      form {
+        label {
+          font-size: 16px;
+        }
+  
+        input,
+        textarea {
+          font-size: 16px;
+          padding: 10px;
+        }
+  
+        .products-container {
+          flex-direction: row;
+  
+          .product-details {
+            flex: 1 0 45%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Small laptops: max-width: 1024px */
+  @media (max-width: 1024px) {
+    .form-container {
+      padding: 20px;
+  
+      form {
+        label {
+          font-size: 17px;
+        }
+  
+        input,
+        textarea {
+          font-size: 17px;
+          padding: 12px;
+        }
+  
+        .products-container {
+          flex-direction: row;
+  
+          .product-details {
+            flex: 1 0 45%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Large laptops: max-width: 1440px */
+  @media (max-width: 1440px) {
+    .form-container {
+      padding: 20px;
+  
+      form {
+        label {
+          font-size: 18px;
+        }
+  
+        input,
+        textarea {
+          font-size: 18px;
+          padding: 14px;
+        }
+  
+        .products-container {
+          flex-direction: row;
+  
+          .product-details {
+            flex: 1 0 45%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Standard desktops: max-width: 1920px */
+  @media (max-width: 1920px) {
+    .form-container {
+      padding: 20px;
+  
+      form {
+        label {
+          font-size: 18px;
+        }
+  
+        input,
+        textarea {
+          font-size: 18px;
+          padding: 14px;
+        }
+  
+        .products-container {
+          flex-direction: row;
+  
+          .product-details {
+            flex: 1 0 45%;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,60 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+
+    h3 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .success-image {
+        max-width: 50%;
+        margin: 20px 0; // Added space around the image for a better layout
+    }
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 10px; // Adds space between buttons
+}
+
+.btn {
+    padding: 12px 24px; // Slightly increased padding for a more tactile feel
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #FF5722; // Dark orange color
+    color: black; // Text color changed to black
+    font-size: 16px; // Slightly larger font size for readability
+
+    &:hover {
+        opacity: 0.8;
+        background-color: darken(#FF5722, 10%); // Darkens the background on hover
+    }
+}
+
+.continue-btn, .download-btn {
+    flex: 1; // Makes buttons take equal space
+}

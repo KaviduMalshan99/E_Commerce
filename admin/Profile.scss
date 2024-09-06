@@ -1,0 +1,154 @@
+// Variables
+$background-color: #050517;
+$button-bg-color: #fb5909;
+$button-bg-hover-color: #0056b3;
+$button-bg-delete: #45a29e;
+$input-border-color: #ccc;
+$profile-border-color: #ccc;
+$text-color: #fff;
+$font-size-large: 24px;
+$font-size-medium: 16px;
+$font-weight-bold: bold;
+$padding-small: 8px;
+$padding-medium: 10px 20px;
+$padding-large: 20px;
+$border-radius-small: 5px;
+$border-radius-medium: 10px;
+$border-radius-large: 20px;
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$max-width: 800px;
+$margin-auto: 0 auto;
+$margin-top-large: 40px;
+$margin-top-small: 20px;
+
+// Main Profile Path
+.userpropath {
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: $margin-top-small;
+}
+
+// Main Container
+.usermain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding-large;
+  background-color: $background-color;
+  border-radius: $border-radius-medium;
+  box-shadow: $box-shadow;
+  max-width: $max-width;
+  margin: $margin-auto;
+  margin-top: $margin-top-large;
+
+  .upfirstt {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: $margin-top-small;
+
+    .uplblsecc {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-right: 10px;
+
+      .uplbls {
+        margin-bottom: $padding-small;
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    .upintextsecc {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 10px;
+
+      .upfinp {
+        margin-bottom: $padding-small;
+        padding: $padding-small;
+        border-radius: $border-radius-small;
+        border: 1px solid $input-border-color;
+        width: 100%;
+      }
+    }
+
+    .imgnbtnseccup {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .upimgsecc {
+        margin-bottom: $margin-top-small;
+
+        .uuprofile-image {
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid $profile-border-color;
+        }
+      }
+
+      .editupbtn {
+        padding: $padding-medium;
+        border: none;
+        border-radius: $border-radius-large;
+        background-color: $button-bg-color;
+        color: $text-color;
+        cursor: pointer;
+        margin-bottom: $padding-small;
+
+        &:hover {
+          background-color: $button-bg-hover-color;
+        }
+      }
+    }
+  }
+
+  .upseccond {
+    margin-top: $margin-top-small;
+    text-align: center;
+
+    .logoutbtnup {
+      padding: $padding-medium;
+      border: none;
+      border-radius: $border-radius-medium;
+      background-color: $button-bg-delete;
+      color: $text-color;
+      cursor: pointer;
+      margin-bottom: $padding-small;
+
+      &:hover {
+        background-color: $button-bg-hover-color;
+      }
+    }
+  }
+
+  .logout {
+    text-align: center;
+    margin-top: $margin-top-small;
+
+    .logoutbtnup {
+      padding: $padding-medium;
+      border: none;
+      border-radius: $border-radius-medium;
+      background-color: $button-bg-delete;
+      color: $text-color;
+      cursor: pointer;
+      margin-bottom: $padding-small;
+
+      &:hover {
+        background-color: $button-bg-hover-color;
+      }
+    }
+  }
+}

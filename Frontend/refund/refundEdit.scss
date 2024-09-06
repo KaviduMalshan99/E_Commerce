@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+.refund-main{
+  margin-top: -2.1%;
+}
+
+.rnmh {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.rnlp {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 23px;
+}
+
+/* Button container */
+
+.rnmbtns {
+  margin-top: 20px;
+  display: flex;
+
+  /* Change to flex */
+  justify-content: center;
+
+  /* Center align horizontally */
+  gap: 10px;
+
+  /* Add gap between buttons */
+}
+
+/* refundNow.css */
+
+/* Main header */
+
+.rnmh {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+/* Breadcrumb */
+
+.rnlp {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 23px;
+}
+
+.ira{
+  margin-top: 6px;
+}
+
+
+/* Button container */
+
+.rnmbtns {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Form container */
+
+.rnmcont {
+  padding-top: 70px;
+  margin-top: 20px;
+  background-color: #F1F1F1;
+  width: 800px;
+  border-radius: 30px;
+  height: 850px;
+  margin-bottom: 20px;
+  padding: 50px 50px 0px 50px;
+
+  /* Added padding */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+  /* Added box shadow */
+}
+
+/* Form input fields */
+
+.rnmconinp, .rn2mconreastyp, .rn2mconaddimg {
+  margin: 10px 0;
+  padding: 10px;
+  width: calc(100% - 20px);
+
+  /* Take full width minus padding */
+  border: 1.5px solid #ccc;
+  border-radius: 25px;
+}
+
+/* Submit button */
+
+.regbtn {
+  color: white;
+  border-radius: 68px;
+  margin-top: 30px;
+  width: 200px;
+  padding: 10px 20px;
+  border: transparent;
+  background-color: #000000;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+
+  /* Add pointer cursor */
+
+  &:hover {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(176deg, rgba(2, 0, 36, 1) 0%, rgba(6, 6, 121, 1) 75%);
+  }
+
+  &:active {
+    transform: translate(0em, 0.2em);
+  }
+}
+
+/* Text inputs and text areas border */
+
+.rnmconinp, .rn2mconreastyp, .rn2mconaddimg {
+  margin: 10px 0;
+  padding: 10px;
+  width: calc(100% - 20px);
+
+  /* Take full width minus padding */
+  border: 1.5px solid rgb(0, 0, 0);
+
+  /* Adjust border width as needed */
+  border-radius: 5px;
+}
+
+/* Hover effect */
+
+.rnmconinp:hover, .rn2mconreastyp:hover, .rn2mconaddimg:hover {
+  border-color: rgb(153, 153, 153);
+
+  /* Change border color on hover if desired */
+}
+
+/* Add a container for the buttons */
+
+.rbutton-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  /* Adjust margin as needed */
+  gap: 100px;
+}
+
+/* Style for the buttons */
+
+.editbtn, .dltbtn {
+  color: white;
+  border-radius: 28px;
+  width: 25%;
+
+  /* Set button width */
+  padding: 8px 16px;
+
+  /* Adjust padding for smaller buttons */
+  border: transparent;
+  background-color: #000000;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0;
+}
+
+.buttonremore {
+  color: white;
+  border-radius: 28px;
+  width: fit-content;
+
+  /* Set button width */
+  padding: 8px 16px;
+
+  /* Adjust padding for smaller buttons */
+  border: transparent;
+  background-color: #000000;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  font-size: 11px;
+  margin: 0;
+  margin-left: 5%;
+}
+
+.buttonremore:hover {
+  // background: rgb(2, 0, 36);
+  // background: linear-gradient(176deg, rgba(2, 0, 36, 1) 0%, rgba(6, 6, 121, 1) 75%);
+  background: #ff3c00;
+}
+
+/* Style for the buttons on hover and active states */
+
+.editbtn:hover, .dltbtn:hover {
+  background: #ff3c00;
+}
+
+.editbtn:active, .dltbtn:active {
+  transform: translate(0em, 0.2em);
+}
+
+/* Add Image button */
+
+.rn2mconaddimg-btn {
+  padding: 10px 20px;
+
+  /* Adjust padding as needed */
+  margin-top: 10px;
+
+  /* Add some top margin */
+  border: none;
+  background-color: #000000;
+
+  /* Button background color */
+  color: white;
+
+  /* Button text color */
+  border-radius: 25px;
+
+  /* Add border radius for rounded corners */
+  cursor: pointer;
+  font-size: 11px;
+
+  /* Adjust font size */
+
+  &:hover {
+    background-color: #333333;
+
+    /* Change background color on hover */
+  }
+}
+
+/* Image preview */
+
+.preview-image {
+  display: block;
+  margin-top: 10px;
+  max-width: 80px;
+
+  /* Adjust the max-width to your desired smaller size */
+  height: auto;
+
+  /* Maintain aspect ratio */
+  border-radius: 5px;
+
+  /* Add border radius for rounded corners */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+  /* Add shadow for depth */
+}
+
+/* Save Details button */
+
+.save-details-button {
+  color: white;
+  border-radius: 28px;
+  width: 25%;
+
+  /* Set button width */
+  padding: 8px 16px;
+
+  /* Adjust padding for smaller buttons */
+  border: transparent;
+  background-color: #000000;
+
+  /* Button background color */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 5%;
+
+  &:hover {
+    background: #ff3c00;
+
+    /* Change background color on hover */
+  }
+
+  &:active {
+    transform: translate(0em, 0.2em);
+  }
+}
+
+/* Save Details button hover and active states */
+
+#transparent-buttonr {
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: #000000;
+
+  /* Text color */
+  cursor: pointer;
+  font-size: 16px;
+
+  /* Adjust font size as needed */
+  font-weight: bold;
+
+  /* Optionally, adjust font weight */
+  width: 150px;
+
+  /* Increase button width */
+  margin-top: -1%;
+
+  &:hover {
+    opacity: 0.7;
+
+    /* Adjust opacity on hover as desired */
+  }
+}
+
+
+.confirm-dialogrefund {
+  background-color: #ffffff; /* Background color */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding */
+  width: 300px; /* Width */
+  position: fixed; /* Fixed position */
+  top: 50%; /* 50% from the top */
+  left: 50%; /* 50% from the left */
+  transform: translate(-50%, -50%); /* Centered */
+  
+}
+
+.confirm-dialogrefund p {
+  margin-bottom: 10px; /* Bottom margin */
+}
+
+.confirm-dialogrefund button {
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding */
+  cursor: pointer; /* Cursor pointer */
+  font-size: 16px; /* Font size */
+  margin-right: 10px; /* Right margin */
+}
+
+#refno {
+  background-color: #f53232; /* Red background */
+  color: #ffffff; /* White text */
+}
+
+#refno:hover {
+  background-color: #a21616; /* Darker red background on hover */
+}
+
+#refyes {
+  background-color: #25b525; /* Green background */
+  color: #ffffff; /* White text */
+}
+
+#refyes:hover {
+  background-color: #4ca84c; /* Darker green background on hover */
+}
+
+
+
+.confirm-dialogrefun {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+
+    /* Add margin to separate buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5%;
+
+    &:first-child {
+      background-color: green;
+      color: white;
+      align-self: flex-start;
+
+      /* Align "Yes" button to the left */
+    }
+
+    &:last-child {
+      background-color: red;
+      color: white;
+      align-self: flex-end;
+
+      /* Align "No" button to the right */
+    }
+
+    &:hover {
+      filter: brightness(90%);
+
+      /* Darken button on hover */
+    }
+  }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 767px) {
+  .refund-main {
+    margin-top: -7%;
+  }
+
+  .rnmh {
+    font-size: 25px;
+  }
+
+  .rnlp {
+    font-size: 18px;
+  }
+
+  .rnmbtns {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .rnmcont {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .rnmconinp,
+  .rn2mconreastyp,
+  .rn2mconaddimg {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .editbtn {
+    width: 50%;
+    padding: 10px;
+  }
+  .dltbtn {
+    width: 50%;
+    padding: 10px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #rnmcont {
+    width: 75%;
+  }
+
+  #root{
+        margin-top: -3.1%;
+      }
+}
+
+@media only screen and (max-width: 1200) {
+  
+  #root{
+    margin-bottom: -3.5%;
+  }
+}

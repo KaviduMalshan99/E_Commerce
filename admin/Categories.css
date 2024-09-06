@@ -1,0 +1,146 @@
+/* .mainContainer .CATMAINTITLE{
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.CATsearch-bar{
+  padding-bottom: 20px;
+  margin-right: 15px;
+  margin-left: 65%;
+}
+
+.CATsearch-button{
+  width: 50px;
+  border-radius: 5px;
+  background-color: #07223D;
+}
+
+.CATsearch-button:hover{
+  background-color: #07223D;
+}
+
+.addCategorySection {
+    background-color: #cfd2d2;
+    width: 65%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 2px 0 10px 50px;
+    
+}
+  
+.addCategorySection .Cath2title {
+ font-size: 18px;
+ font-weight: bold;
+}
+  
+.addCategorySection .boxes{
+   display: flex;
+   gap: 30px;
+   padding-left: 10%;
+   padding-top: 15px;
+   padding-bottom: 25px; 
+   align-items: center;
+}
+  
+.boxes div{
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.addCategorySection form div input {
+  border-radius: 8px;
+  height: 30px;
+  border: none;
+  width: 250px;
+  outline: 0;
+  padding-left: 10px;  
+}
+
+  
+  .addCategorySection .CATbtn {
+    border: none;
+    width: 25%;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+    background-color: #07223D;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left:35% ;
+    margin-bottom: 5px;
+  }
+  
+
+.categorytable  table{
+    width: 99%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #07223D;
+    border-radius: 10px;
+  }
+  
+  .categorytable th, .categorytable td {
+    
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .categorytable th {
+    background-color: #07223D;
+    color: white;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .categorytable td{
+    background-color: #F7FBFE;
+    border: 1px solid #07223D;
+  }
+  
+  .categorytable .deletebtn {
+    padding: 5px 10px 5px 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .categorytable .CATeditbtn {
+    padding: 5px 20px 5px 20px;
+    background-color: #07223D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .categorytable .CATupdatebtn{
+    padding: 5px 20px 5px 20px;
+    background-color: #07223D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .categorytable .CATcancelbtn{
+    padding: 5px 10px 5px 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .categorytable .CATedittext{
+    width: 300px;
+    margin-bottom: 0px;
+  }
+
+  .subtitle{
+    margin-top: 20px;
+  }
+
+   */

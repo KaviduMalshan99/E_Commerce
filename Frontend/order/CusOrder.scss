@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fb5909; /* Global font color */
+}
+
+.orders-list {
+  min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+
+  .page-title {
+    color: #ff3c00; /* Updated font color */
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .loading-message {
+    text-align: center;
+    color: #ff3c00;
+    font-size: 20px;
+    margin: 30% auto;
+    p {
+      margin: 10px 0;
+    }
+    a {
+      color: #ff3c00;
+      text-decoration: underline;
+      &:hover {
+        color: darken(#ff3c00, 10%);
+      }
+    }
+  }
+
+  .orders-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .order-card {
+    background-color: black; /* Background color for each order section */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    .order-info {
+      color: #fb5909; /* Global font color */
+
+      h5 {
+        font-size: 1.5em;
+        margin: 0;
+      }
+
+      p {
+        margin: 5px 0 15px;
+      }
+    }
+
+    .order-content {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      flex-direction: column;
+
+      @media (min-width: 601px) {
+        flex-direction: row;
+      }
+
+      .order-details {
+        display: flex;
+        flex-direction: column;
+
+        .product-details {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          flex-direction: column;
+
+          @media (min-width: 601px) {
+            flex-direction: row;
+          }
+
+          .product-info {
+            color: #fb5909; /* Global font color */
+            margin-right: 20px;
+            padding: 10px;
+            text-align: center;
+
+            @media (min-width: 601px) {
+              text-align: left;
+            }
+
+            p {
+              margin: 2px 0;
+            }
+
+            .product-name {
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+
+            .product-quantity,
+            .product-size,
+            .product-color,
+            .product-price {
+              font-size: 0.9em;
+            }
+
+            .revieww {
+              background-color: #fb5909; /* Button background color */
+              color: white; /* Button font color */
+              border: none;
+              border-radius: 10px;
+              padding: 10px 20px;
+              width: 150px;
+              margin-top: 10px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: darken(#fb5909, 10%);
+              }
+            }
+          }
+
+          .product-image {
+            width: 150px;
+            height: 150px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            @media (min-width: 601px) {
+              margin-bottom: 0;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              margin-top: 0px;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+
+      .order-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 601px) {
+          align-items: flex-end;
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .revieww,
+        .tracking-button,
+        .cancelorderbtn {
+          background-color: #fb5909; /* Button background color */
+          color: white; /* Button font color */
+          border: none;
+          border-radius: 10px;
+          padding: 10px 20px;
+          width: 80px;
+          margin-top: 10px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(#fb5909, 10%);
+          }
+        }
+      }
+    }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure form is on top of everything */
+
+    .ratingpopupform,
+    .cancellation-form-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 10000; /* Ensure the form container is on top */
+
+      .ratingform-element {
+        margin-bottom: 20px;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+      }
+
+      .images-preview-containers {
+        display: flex;
+
+        .preview-images {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+      }
+
+      .error-message,
+      .rate-error-message {
+        color: red;
+        font-size: 0.9em;
+      }
+
+      .submit-btn {
+        text-align: center;
+
+        .ratingsubbtn2 {
+          background-color: #fb5909; /* Button background color */
+          color: white; /* Button font color */
+          border: none;
+          border-radius: 10px;
+          padding: 10px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(#fb5909, 10%);
+          }
+        }
+      }
+
+      .ratestar {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .blur-background {
+    filter: blur(5px);
+  }
+
+  .orders-container {
+    max-height: none;
+    overflow-y: none;
+  }
+
+  .show-more-button {
+    background-color: #fb5909; /* Button background color */
+    color: white; /* Button font color */
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+
+    &:hover {
+      background-color: darken(#fb5909, 10%);
+    }
+  }
+
+
+}
+
+/* Media Queries for Tablets */
+
+@media (max-width: 600px) {
+  .orders-list {
+
+    .order-card {
+
+      .order-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .order-details {
+          .product-details {
+            .product-info {
+              .revieww {
+                margin-right: -8%;
+              }
+            }
+          }
+        }
+
+        .order-actions {
+          flex-direction: column;
+          align-items: center;
+
+          .tracking-button {
+            width: 150px; /* Same width as review button */
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

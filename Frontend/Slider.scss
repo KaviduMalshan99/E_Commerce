@@ -1,0 +1,114 @@
+:root {
+    --slider-aspect-ratio-desktop: 2.39; // Aspect ratio for desktop (2.39:1)
+    --slider-aspect-ratio-mobile: 5/3;   // Aspect ratio for mobile (3:5)
+    --slider-button-size: 40px;
+    --slider-padding-bottom: 80px;
+  }
+  
+  .slider {
+    padding-bottom: 0%;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: var(--slider-padding-bottom);
+    top: 64px;
+  
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover; // Ensure the image covers the entire slide area
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+      z-index: 0;
+  
+      &.active {
+        opacity: 1;
+        z-index: 1;
+      }
+  
+      &.social {
+        position: relative;
+      }
+  
+      .social-icons {
+        position: absolute;
+        display: flex;
+        gap: 15px;
+  
+        a {
+          color: #fff;
+          font-size: 20px;
+          padding: 5px;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none; // Remove underline
+        }
+  
+        &.desktop {
+          bottom: 10px;
+          right: 30px;
+        }
+  
+        &.mobile {
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 2;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: var(--slider-button-size);
+      height: var(--slider-button-size);
+  
+      &.prev {
+        left: 10px;
+      }
+  
+      &.next {
+        right: 10px;
+      }
+  
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+  
+  /* Mobile view (0px to 1024px) */
+  @media (max-width: 1024px) {
+    .slider {
+      height: calc(100vw * var(--slider-aspect-ratio-mobile)); // Maintain aspect ratio 3:5 for mobile
+    }
+  }
+  
+  /* Desktop view (1025px and up) */
+  @media (min-width: 1025px) {
+    .slider {
+      height: calc(100vw / var(--slider-aspect-ratio-desktop)); // Maintain aspect ratio 2.39:1 for desktop
+    }
+  
+    .slide {
+      margin: 0 auto; // Center the slide horizontally
+    }
+  }
+  

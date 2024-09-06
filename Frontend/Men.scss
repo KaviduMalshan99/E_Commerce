@@ -1,0 +1,412 @@
+$color_1: #fff;
+$color_2: black;
+$color_3: #1d1919;
+$color_4: #888;
+$color_5: #000;
+$background-color_1: #050517;
+$background-color_2: #fff;
+$background-color_3: black;
+$background-color_4: #efece9;
+$background-color_5: #000;
+
+@import "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&family=Poppins:wght@400;500;700&display=swap";
+
+.men-loader-container{
+
+  .men-loader-logo{
+    height: 130px;
+    width: 100px;
+  }
+}
+
+.men-main-container {
+
+  .men-main-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .men-main-bag-logo {
+      margin-top: 70px;    
+      width: 100%;
+      height: auto;
+    }
+
+    .men-main-title {
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      font-size: 30px;
+      font-weight: 800;
+      color: $color_1;
+    }
+
+    .men-shoe-main-title{
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      font-size: 30px;
+      font-weight: 800;
+      color: $color_1;
+    }
+  }
+
+  .men-breadcrumb {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 2%;
+    a {
+      text-decoration: none;
+      color: $color_2;
+    }
+  }
+}
+
+.men-product-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;//kavidu added this //vihan changed this to padding-left to padding
+
+  .men-product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 65px;  //kavidu change this 35 to 65
+    justify-content: center;
+    padding-bottom: 5%;
+
+    .men-product-box {
+      position: relative;
+      width: 100%;
+      max-width: 250px;
+
+      .men-product-image {
+        position: relative;
+        img {
+          border-radius: 10px;
+          width: 100%;
+          height: auto;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover img {
+          transform: scale(1.03);
+        }
+
+        .men-product-overlay {
+          width: 50%;
+          position: absolute;
+          bottom: 5%;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+
+          p {
+            background-color: white;
+            z-index: 10;
+            padding: 7px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: 600;
+          }
+
+          p:hover {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+
+        &:hover .men-product-overlay {
+          opacity: 1;
+        }
+
+        .men-discount-percentage,
+        .men-sold-out-notice {
+          position: absolute;
+          top: 15px;
+          right: 10px;
+          background-color: $background-color_4;
+          border-radius: 5px;
+          padding: 5px 10px;
+          text-align: center;
+          font-size: 12px;
+          font-weight: bold;
+          color: $color_3;
+        }
+
+        .men-sold-out-notice {
+          background: rgba(255, 0, 0, 0.8);
+          color: #fff;
+        }
+      }
+
+      .men-product-info {
+        .men-product-title {
+          font-size: 15px;
+          margin-top: 10px;
+        }
+
+        .men-product-price {
+          font-size: 20px;
+          font-weight: bold;
+          text-align: left;
+          margin-top: 5px;
+
+          .men-original-price {
+            font-size: 14px;
+            color: $color_4;
+            text-decoration: line-through;
+            margin-right: 8px;
+          }
+
+          .men-discounted-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: $color_5;
+            text-decoration: none;
+          }
+        }
+
+        .men-product-payments {
+          text-align: left;
+
+          .men-payment-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: -2%;
+
+            img {
+              height: 15px;
+              width: 45px;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.men-loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color_1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.men-loader-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .men-loader-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive Styles for screens with a maximum width of 575.98px */
+@media (max-width: 575.98px) {
+  .men-main-container {
+    padding: 0; /* Adjust padding on both sides */
+
+    .men-main-image-container {
+      margin: 0;
+      padding-bottom: 10px;
+
+      .men-main-bag-logo {
+        margin-top: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .men-main-title {
+        font-size: 24px;
+        left: 10%;
+      }
+    }
+
+    .men-breadcrumb {
+      font-size: 14px;
+    }
+  }
+
+  .men-product-container {
+    padding: 0;
+
+    .men-product-list {
+      gap: 15px; /* Reduce gap for smaller screens */
+
+      .men-product-box {
+        flex: 0 0 calc(50% - 15px); /* Two columns layout */
+        margin: 0;
+        width: 100%;
+        height: auto;
+
+        .men-product-image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .men-product-info {
+          text-align: left;
+
+          .men-product-title {
+            font-size: 14px;
+            text-align: left;
+          }
+
+          .men-product-price {
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+
+            .men-original-price {
+              font-size: 14px;
+              margin: 0px;
+              padding: 0;
+            }
+
+            .men-discounted-price {
+              font-size: 18px;
+            }
+          }
+
+          .men-product-payments {
+            .men-payment-option {
+              padding-top: 5px;
+              font-size: 10px;
+
+              img {
+                height: 15px;
+                width: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// /* Responsive Design */
+// @media (max-width: 575.98px) {
+// 	.men-product-list {
+// 	  display: flex;
+// 	  flex-wrap: wrap;
+// 	  gap: 10px; /* Adjusted gap for better spacing */
+// 	  justify-content: space-between; /* Ensures items are spaced correctly */
+// 	  padding: 0 10px; /* Padding to ensure items don't touch screen edges */
+  
+// 	  .men-product-box {
+// 		flex: 0 0 calc(40% - 10px); /* Ensures two items per row with gap */
+// 		margin-bottom: -12%; /* Adjusted margin for better spacing */
+  
+// 		.men-product-image {
+// 		  cursor: pointer; /* Make image clickable */
+// 		}
+  
+// 		.men-discount-percentage,
+// 		.men-sold-out-notice,
+// 		.men-product-title,
+// 		.men-original-price,
+// 		.men-discounted-price,
+// 		.men-payment-option {
+// 		  font-size: 10px;
+// 		}
+  
+// 		.men-product-title {
+// 		  margin-top: 5px;
+// 		}
+  
+// 		.men-product-price {
+// 		  display: flex;
+// 		  flex-direction: column; /* Stack prices vertically */
+// 		  align-items: flex-start;
+  
+// 		  .men-discounted-price {
+// 			font-size: 12px; /* Larger font size for discount price */
+// 		  }
+  
+// 		  .men-original-price {
+//         margin: 0;
+//         padding: 0;
+// 			font-size: 10px; /* Smaller font size for original price */
+// 			text-decoration: line-through;
+// 			color: $color_4;
+// 		  }
+// 		}
+// 	  }
+// 	}
+// 	.men-product-overlay {
+// 	  display: none; /* Hide the "View More" button */
+// 	}
+// }
+  
+
+// @media (max-width: 576px) {
+//   .men-product-list {
+//     .men-product-box {
+//       width: calc(50% - 12.5px);
+//     }
+//   }
+//   .men-product-overlay {
+//     display: none; /* Hide the "View More" button */
+//   }
+// }
+
+@media (max-width: 768px) {
+  .men-product-list {
+    .men-product-box {
+      width: calc(33.33% - 16.66px);
+    }
+  }
+  .men-product-overlay {
+    display: none; /* Hide the "View More" button */
+  }
+}
+
+@media (max-width: 1024px) {
+  .men-product-list {
+    .men-product-box {
+      width: calc(25% - 18.75px);
+    }
+  }
+  .men-product-overlay {
+    display: none; /* Hide the "View More" button */
+  }
+}
+
+@media (min-width: 1200px) {
+  .men-product-list {
+    .men-product-box {
+      width: calc(20% - 20px);
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .men-product-list {
+    .men-product-box {
+      width: calc(16.66% - 21.66px);
+    }
+  }
+}

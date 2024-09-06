@@ -1,0 +1,97 @@
+// Variables
+$background-color: #ffffff;
+$border-color: #ccc;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$text-color: #07223D;
+$font-size-small: 10px;
+$font-size-medium: 20px;
+$font-size-large: 16px;
+$padding-small: 8px;
+$padding-medium: 16px;
+$margin-small: 10px;
+$margin-medium: 15px;
+$gap: 20px;
+$border-radius: 8px;
+$popup-width: 300px;
+
+// Main Notification Container
+.mainNotification {
+  margin-top: 20px;
+  height: 50px;
+  background-color: $background-color;
+  width: 98%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  // Notification Title
+  .minnotofititle {
+    font-size: $font-size-small;
+    margin-left: $margin-medium;
+  }
+
+  // Notification List
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: $gap;
+    align-items: center;
+    margin-right: $margin-medium;
+
+    li {
+      margin-left: $margin-small;
+
+      i {
+        font-size: $font-size-medium;
+        color: $text-color;
+      }
+    }
+  }
+
+  // Notification Popup
+  .notification-popup {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    box-shadow: $box-shadow;
+    padding: $padding-medium;
+    z-index: 100;
+    width: $popup-width;
+    border-radius: $border-radius;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: $padding-small;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: $padding-small;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Notification Icon List
+  .notifi ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-right: $margin-small;
+      cursor: pointer;
+    }
+  }
+}

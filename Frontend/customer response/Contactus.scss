@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+$color_1: white;
+$color_2: #000000;
+$color_3: black;
+$color_4: #595959;
+$color_5: red;
+$font-family_1: 'Poppins', sans-serif;
+$font-family_2: 'Poppins', sans-serif;
+$background-color_1: black;
+$background-color_2: #ffffff;
+$background-color_3: #000000;
+$background-color_4: white;
+$background-color_5: rgb(0, 0, 0, 0.2);
+
+
+
+.cotactusmain{
+	max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+.container1 {
+	.h1header {
+		line-height: 120%;
+		font-size: 70px;
+        font-family: $font-family_1;
+		font-weight: lighter;
+		color: $color_1;
+		background-color: $background-color_1;
+		text-align: center;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+}
+
+.imgcontainercont {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -20px;
+	img {
+		width: 300px;
+		height: auto;
+		margin: 0 10px;
+	}
+	.img1, .img2, .img3 {
+		margin: 40px 20px 50px;
+		height: 420px;
+		width: 425px;
+		cursor: pointer;
+	}
+}
+
+.imgtext1, .imgtext2, .imgtext3 {
+	position: absolute;
+	margin-top: 60px;
+	margin-left: 230px;
+	top: 30%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	h2 {
+		color: $color_1;
+        font-family: $font-family_1;
+		font-size: 35px;
+	}
+}
+
+.imgbtn1, .imgbtn2, .imgbtn3 {
+	background-color: $background-color_2;
+	color: $color_2;
+	font-size: 16px;
+	font-weight: bolder;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-top: 30px;
+	transition: background-color 0.3s ease;
+	&:hover {
+		background-color: $background-color_3;
+		color: $color_1;
+	}
+}
+
+.accordion {
+	margin-top: 70px;
+	background-color: $background-color_4;
+	color: $color_3;
+	text-align: center;
+	width: 85%;
+	margin-left: 100px;
+	padding: 20px 100px 50px;
+	.pcont {
+		font-size: 20px;
+		margin-top: 10px;
+	}
+	.accordion-text {
+		letter-spacing: 0.2px;
+		text-align: center;
+		margin: 50px 0;
+		font-size: 50px;
+		font-weight: bolder;
+	}
+}
+
+ul.faq-text {
+	margin: 50px 100px;
+	letter-spacing: 0.2px;
+	li {
+		list-style: none;
+		.question-arrow {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+}
+
+ul {
+	.question-arrow {
+		.question {
+			cursor: pointer;
+            padding-top: 20px;
+			font-size: 20px;
+		}
+		.hover-bold {
+			&:hover {
+				font-weight: bold;
+			}
+		}
+	}
+	.contpara {
+		margin-top: 20px;
+		width: 90%;
+		text-align: justify;
+		font-size: 15px;
+        font-family: $font-family_1;
+		line-height: 30px;
+        letter-spacing: 1px;
+	}
+}
+
+.line, .sideline, .contactline {
+	display: block;
+	height: 0.1px;
+	width: 100%;
+	background-color: $background-color_5;
+	margin: 10px 0;
+}
+
+.trade {
+	margin-top: 50px;
+	font-family: $font-family_1;
+	background-color: $background-color_4;
+	color: $color_3;
+	width: 85%;
+	padding: 10px 100px;
+	height: 650px;
+    margin-left: 7%;
+	.accordion-text {
+		letter-spacing: 0.2px;
+		text-align: center;
+		margin: 50px 0;
+		font-size: 50px;
+		font-weight: bolder;
+	}
+	.section1 {
+		label {
+			display: flex;
+			margin: 20px 0;
+		}
+		input, textarea {
+			width: 100%;
+			padding: 5px;
+			box-sizing: border-box;
+			outline: none;
+			resize: none;
+			border: none;
+			border-bottom: 1px solid #D3D3D3;
+		}
+		.section2 .faqsbut {
+			margin: 50px 0;
+			float: right;
+			color: white;
+			border-radius: 28px;
+			width: 15%;
+			padding: 8px 16px;
+			border: transparent;
+			background-color: #000000;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+			font-weight: 500;
+			font-size: 15px;
+			margin: 50px;
+			cursor: pointer;
+			&:hover {
+				background: #ff3c00;
+			}
+		}
+	}
+}
+
+.sniper {
+	margin: 0 100px 100px;
+	display: flex;
+	width: 85%;
+	justify-content: center;
+	align-items: center;
+	margin-left: 30px;
+    margin-left: 7%;
+
+	.branch1 {
+		margin: 20px 0 80px;
+		height: 250px;
+		width: 700px;
+		background-color: $background-color_4;
+		.bx1, .bx3 {
+			margin: 20px 0 -50px 100px;
+			font-size: 70px;
+			text-align: left;
+		}
+		.crash {
+			margin: 70px 0 10px 200px;
+			text-align: left;
+		}
+		.paradise1, .paradise2 {
+			line-height: 25px;
+			text-align: center;
+            font-family: $font-family_1;
+			color: $color_3;
+			text-decoration: none;
+			margin-top: -10px;
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 15%;
+		}
+		.paradise1 {
+			margin-left: -3%;
+		}
+		.paradise {
+			// margin-left: 100px;
+		}
+	}
+}
+
+.error-message {
+	color: $color_5;
+}
+
+// Media Queries for Responsive Design
+
+// < 576px
+@media (max-width: 575.98px) {
+    .cotactusmain{
+        width: auto;
+    }
+    .container1 .h1header {
+        font-size: 30px;
+        padding: 20px 10px;
+        width: 100%;
+        padding-top: 20%;
+    }
+    .imgcontainercont {
+        flex-direction: column;
+        width: 75%;
+        margin-left: 30px;
+
+        .img1 , .img2, .img3{
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            
+        }
+        .imgbtn1, .imgbtn2, .imgbtn3 {
+            margin-top: 20px;
+            width: auto;
+            margin-left: -20px;
+        }
+        .imgtext1 {
+            margin-left: 170px;
+            margin-top: -150px;
+        }
+        .imgtext2 {
+            margin-left: 170px;
+            margin-top: 230px;
+        }
+        .imgtext3 {
+            margin-left: 170px;
+            margin-top: 600px;
+        }
+    
+    }
+    .accordion{
+        width: 100%;
+        padding: 5px;
+        margin: 0;
+    }
+
+    .faq-text{
+        width: 70%;
+        // padding-left: -45%;
+    }
+
+    .question-arrow{
+        align-items: center;
+    }
+
+    .trade {
+        width:100%;
+        padding-top: 5px;
+        padding-bottom: 50px;
+        margin: 0;
+        height: auto;
+
+        
+        .section1 .section2 button.faqsbut{
+            margin-top: 5px;
+            width: 50%;  
+        }
+
+        .accordion-text{
+            font-size: 23px;
+        }
+
+        .section1{
+            width: 80%;
+        }
+        
+    }
+
+
+    .sniper {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        .branch1 {
+            width: 100%;
+            
+            .bx1{
+                font-size: 50px;
+                margin-left: 50px;
+            }
+
+            .crash{
+                width: 50%;
+                margin-left: 150px;
+            }
+
+            .paradise{
+                margin-left: 80px;
+                margin-top: 10px;
+                font-size: 20px;
+            }
+
+            .paradise1{
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+            .paradise2{
+                margin-left: 20%;
+                margin-top: 10px;
+                font-size: 18px;
+            }
+
+         }
+    }
+    
+}
+
+// ≥ 576px
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .h1header{
+        margin-top: 5%;
+    }
+
+    .imgcontainercont{
+
+        display: flex;
+        flex-direction: column;
+
+        
+
+        .imgtext1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-top: -220px;
+        }
+
+        .imgtext2{
+            margin-top: 300px;
+        }
+
+        .imgtext3{
+            margin-top: 800px;
+        }
+
+    }
+
+    .accordion{
+
+        width: 100%;
+        
+        margin-left: 5px;
+        
+        .title{
+            font-size: 30px;
+        }
+        .question{
+            font-size: 10px;
+            width: 350px;
+            margin-left: -80px;
+            text-align: left;
+        }
+        
+        
+    }
+
+    .trade{
+        width: 100%;
+
+        .faqsbut{
+            width: 100px;
+            margin-left: -50px;
+        }
+    }
+
+    .sniper{
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .branch1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 25px;
+            text-align: center;
+            width: 90%;
+
+            .crash{
+                margin-left: -40px;
+            }
+            .bx1{
+                margin-left: -30px;
+                font-size: 40px;
+            }
+
+            .dddddd{
+                padding: 0;
+                width: auto;
+                height: 20px;
+            }
+            .paradise1{
+                
+                margin-top: 30%;
+            }
+
+            .paradise2{
+                display: flex;
+                margin-left: -10px;
+                gap: 10px;
+                margin-top: 25%;
+                font-size: 25px;
+                font-weight: bold;
+                color: #000000;
+            }
+        }
+
+        
+    }
+
+}
+
+// ≥ 768px
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+    
+}
+
+// ≥ 992px
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+    .h1header{
+        margin-top: 5%;
+    }
+
+    .imgcontainercont{
+
+        .img1,.img2,.img3{
+            height:300px;
+            width: 300px;
+        }
+
+        .imgtext1, .imgtext2, .imgtext3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 16%;
+        }
+
+    }
+
+    .accordion{
+        
+
+        .question{
+            text-align: left;
+        }
+
+        .plus{
+            padding-left: 5px;
+        }
+    }
+
+    .trade{
+        width: auto;
+    }
+
+    .sniper{
+        margin-left: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .branch1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 25px;
+            text-align: center;
+            width: 50%;
+
+            .crash{
+                margin-left: -40px;
+            }
+            .bx1{
+                margin-left: -30px;
+                font-size: 40px;
+            }
+
+            .dddddd{
+                padding: 0;
+                width: auto;
+                height: 20px;
+            }
+            .paradise1{
+                
+                margin-top: 30%;
+            }
+
+            .paradise2{
+                margin-top: 14%;
+                font-size: 25px;
+                font-weight: bold;
+                color: #000000;
+            }
+        }
+
+        
+    }
+
+    
+}
+
+

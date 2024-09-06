@@ -1,0 +1,245 @@
+/* Define variables */
+$color_1: #FFFFFF;
+$font-family_1: 'Poppins', sans-serif;
+$background-color_1: #07223D;
+$background-color_2: #ebe9e9;
+$background-color_3: #FFFFFF;
+$background-color_4: #000000;
+
+/* Base styles */
+.emailtopicpath-faq {
+  font-size: 35px;
+  margin-top: 20px;
+  margin-left: 1px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.back-button-faq {
+  width: 60%;
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
+  background-color: $background-color_1;
+  color: $color_1;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.container-faq {
+  min-height: calc(100vh - 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-color_2;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+
+.form-faq {
+  width: 100%;
+  max-width: 600px;
+  padding: 24px;
+  background-color: $background-color_3;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-faq {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #CBD5E0;
+  box-sizing: border-box;
+}
+
+.label-faq {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-header-faq {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 24px;
+  font-family: $font-family_1;
+}
+
+.button-faq {
+  background-color: $background-color_1;
+  color: $color_1;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: $background-color_4;
+  }
+}
+
+/* Extra Large Devices (Desktops) */
+@media (min-width: 1200px) {
+  .emailtopicpath-faq {
+    font-size: 40px;
+  }
+
+  .back-button-faq {
+    font-size: 20px;
+    padding: 16px 32px;
+  }
+
+  .form-faq {
+    padding: 32px;
+  }
+
+  .input-faq {
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .button-faq {
+    font-size: 20px;
+    padding: 16px 32px;
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (max-width: 1199px) {
+  .emailtopicpath-faq {
+    font-size: 35px;
+  }
+
+  .back-button-faq {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .form-faq {
+    padding: 24px;
+  }
+
+  .input-faq {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .button-faq {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
+
+/* Medium Devices (Tablets and Small Desktops) */
+@media (max-width: 992px) {
+  .emailtopicpath-faq {
+    font-size: 30px;
+  }
+
+  .back-button-faq {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .form-faq {
+    padding: 20px;
+  }
+
+  .input-faq {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .button-faq {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Small Devices (Tablets) */
+@media (max-width: 768px) {
+  .emailtopicpath-faq {
+    font-size: 28px;
+  }
+
+  .back-button-faq {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .form-faq {
+    padding: 18px;
+  }
+
+  .input-faq {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .button-faq {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 576px) {
+  .emailtopicpath-faq {
+    font-size: 24px;
+  }
+
+  .back-button-faq {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .form-faq {
+    padding: 16px;
+  }
+
+  .input-faq {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .button-faq {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Very Small Devices (Small Phones) */
+@media (max-width: 360px) {
+  .emailtopicpath-faq {
+    font-size: 20px;
+  }
+
+  .back-button-faq {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .form-faq {
+    padding: 12px;
+  }
+
+  .input-faq {
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  .button-faq {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

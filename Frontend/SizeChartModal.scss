@@ -1,0 +1,41 @@
+$background-color_1: none;
+
+.modal-overlay {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.modal-content {
+	position: relative;
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	max-width: 90%;
+	max-height: 80%;
+}
+.modal-close-button {
+	position: absolute;
+	top: 20px;
+	left: 68%;
+	background-color: none;
+	border: none;
+	font-size: 18px;
+	cursor: pointer;
+	color: black;
+	font-weight: bold;
+}
+
+.modal-close-button:hover{
+	background-color: none;
+}
+.size-chart-image {
+	width: 800px;
+	height: 500px;
+}

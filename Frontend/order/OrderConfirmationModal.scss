@@ -1,0 +1,198 @@
+.order-confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.order-confirmation-modal {
+    background: rgba(0, 0, 0, 0.7); /* Transparent black overlay */
+    border-radius: 12px; /* More rounded corners for a modern look */
+    padding: 30px; /* Increased padding */
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    text-align: center;
+    position: relative; /* Ensure proper stacking context */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+    border: 2px solid black; /* Black border */
+    background-image: url('/src/assets/LogoSymbol-Orang.png'); /* Add your background image here */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the background image */
+    display: flex; /* To align content vertically */
+    flex-direction: column; /* Flex column to stack items vertically */
+    align-items: center; /* Center align items horizontally */
+    justify-content: center; /* Center align items vertically */
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        padding: 25px;
+        max-width: 90%;
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+        padding: 25px;
+        max-width: 80%;
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+        padding: 30px;
+        max-width: 70%;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1400px) {
+        padding: 30px;
+        max-width: 60%;
+    }
+
+    @media (min-width: 1400px) {
+        padding: 30px;
+        max-width: 50%;
+    }
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 10px; /* Rounded corners for the inner content */
+    padding: 20px; /* Padding for inner content */
+    text-align: center;
+    width: 100%; /* Ensure it fills the modal */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+
+    h2 {
+        font-size: 26px;
+        color: #28a745; /* Green color for success */
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #666;
+    }
+    span {
+        padding-right: 0;
+        margin-right: 0;
+        padding-left: 15%;
+        font-size: 16px;
+        color: #666;
+    }
+    h3 {
+        margin-top: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .order-id {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .payment-details {
+        text-align: left;
+        margin-top: 20px;
+
+        p {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            font-size: 15px;
+
+            strong {
+                text-align: left;
+                color: #333;
+            }
+
+            span {
+                text-align: right;
+                color: #555;
+            }
+        }
+    }
+
+    .modal-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        .continue-button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #000;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+            &:hover {
+                background-color: #ff3c00;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .success-icon {
+        font-size: 100px;
+        color: #28a745;
+        margin-bottom: 10px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 5px;
+            font-size: 60px;
+        }
+
+        @media (min-width: 576px) and (max-width: 768px) {
+            margin-bottom: 10px;
+            font-size: 70px;
+        }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            margin-bottom: 15px;
+            font-size: 80px;
+        }
+
+        @media (min-width: 992px) {
+            margin-bottom: 10px;
+            font-size: 100px;
+        }
+
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            margin-bottom: 5px;
+            font-size: 60px;
+        }
+        @media (min-width: 1400px) {
+            margin-bottom: 5px;
+            font-size: 60px;
+        }
+    }
+}

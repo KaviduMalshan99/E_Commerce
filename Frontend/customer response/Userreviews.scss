@@ -1,0 +1,135 @@
+.ReviewUser_main {
+  background-color: #f4f4f4;
+  padding: 30px;
+}
+
+.ReviewUser_container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.no-reviews-message {
+  text-align: center;
+  color: #ff3c00;
+  font-size: 20px;
+  margin: 30% auto
+}
+
+.review-box {
+  background: #000;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  margin-top: 10%;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.product-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fb5909;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+
+  .star {
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+
+    &.filled {
+      color: #ff9800;
+    }
+  }
+}
+
+.rate-error {
+  color: red;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.review-body {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.review-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  .review-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+}
+
+.review-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  .ReviewUser_save,
+  .ReviewUser_cancel,
+  .ReviewUser_Edit,
+  .ReviewUser_Delete {
+    background-color: #393939;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .ReviewUser_cancel,
+  .ReviewUser_Delete {
+    background-color: #dc3545;
+
+    &:hover {
+      background-color: #c82333;
+    }
+  }
+}

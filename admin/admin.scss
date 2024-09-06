@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.admin-container {
+  display: flex;
+  height: fit-content;
+  min-height: 100vh;
+}
+
+.nav-bar {
+  width: 250px; /* Fixed width for the side panel */
+  background-color: #07223D;
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px 0 0 5px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 70%; /* Fixed width for mobile view */
+    transform: translateX(-100%); /* Hide side panel by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    &.open {
+      transform: translateX(0); /* Show side panel when open */
+      overflow: auto; /* Allow scrolling when open */
+    }
+  }
+
+  
+}
+
+.company-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  
+}
+
+.company-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.navlinks {
+  margin-top: 10%;
+  font-size: 15px;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+}
+
+.nav-link {
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 10px 0 0 10px;
+  margin: 5px 0;
+  text-decoration: none;
+  display: flex;
+  color: aliceblue;
+  align-items: center;
+
+  &:hover {
+    background-color: #555;
+  }
+
+  &.active {
+    background-color: #777;
+  }
+
+  i {
+    margin-right: 15px;
+    color: aliceblue;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 0;
+    text-align: center;
+    i {
+      margin-right: 0;
+    }
+  }
+}
+
+.content-area {
+  flex-grow: 1;
+  padding-left: 15px;
+  background-color: #ebe9e9;
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  position: fixed;
+  left: 10px;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  background-color: #07223D;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 5px;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&family=Poppins:wght@400;500;700&display=swap');
+
+.menNAmain {
+  padding: 0px;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.menNAlogo {
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+}
+
+.menNAmain1 {
+  font-size: 18px;
+  padding: 0px;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.menNAmid {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menNA {
+  padding: 0px;
+  margin-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 25px;
+}
+
+.NAbox {
+  position: relative;
+  flex: 0 0 calc(20% - 20px);
+  margin-bottom: 40px;
+  margin-right: 3%;
+  width: 200px;
+  height: 40%;
+
+  img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .NAimgage:hover img {
+    transform: scale(1.03);
+  }
+
+  .overlay {
+    
+    i,
+    svg {
+      font-size: 22px;
+      cursor: pointer;
+      padding: 13px;
+      border-radius: 60px;
+      background: #fff;
+    }
+
+    svg {
+      border: 1px solid white;
+      border-radius: 360px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: white;
+      color: black;
+    }
+  }
+
+  // .NAoverlay3 {
+  //   opacity: 0;
+  //   align-items: center;
+  //   a {
+  //     text-decoration: none;
+  //     color: black;
+  //   }
+
+  //   p {
+  //     position: absolute;
+  //     margin-left: 0;
+  //     margin-right: 0;
+  //     margin-top: -30%;
+  //     transform: translateX(45%);
+  //     padding: 7px 20px;
+  //     background-color: #fff;
+  //     border-radius: 5px;
+  //     font-weight: 500;
+  //     z-index: 1;
+
+  //   }
+  // }
+
+  &:hover .NAoverlay3 {
+    opacity: 1;
+  }
+
+  .NAoverlay3 p:hover {
+    background-color: black;
+    color: #fff;
+    display: block;
+  }
+
+  .NAinformations {
+    width: 101%;
+
+    .NAtitle {
+      margin-top: 3px;
+      font-size: 15px;
+    }
+
+    .NAprice {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      margin-top: -3px;
+      display: flex;
+      align-items: baseline;
+
+      .NAoriginal-priceee {
+        font-size: 14px;
+        color: #888;
+        text-decoration: line-through;
+        margin-right: 8px;
+      }
+
+      .NAdiscounted-priceee {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+      }
+    }
+
+    .NAratings {
+
+      .NApaymentsimg {
+
+        img {
+          margin-bottom: 2%;
+        }
+      }
+    }
+    .NApaymentsimg {
+      text-align: left;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      img {
+        height: 15px;
+        width: 45px;
+      }
+    }
+  }
+
+  .NAdiscount-percentage {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    background-color: #efece9;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    width: 80px;
+    color: #1d1919;
+  }
+
+  .NAsold-out-notice {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    width: 80px;
+    background: rgba(255, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+  }
+}
+
+/* Responsive Styles for screens with a maximum width of 575.98px */
+@media (max-width: 575.98px) {
+  .menNAmid {
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-left: 12px; /* Add padding to the left */
+    padding-right: 12px; /* Add padding to the right */
+  }
+
+  .menNA {
+    margin: 0;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .NAbox {
+    flex: 0 0 calc(50% - 15px); /* Two columns */
+    margin: 0;
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .NAinformations {
+      text-align: left; /* Changed alignment to left */
+
+      .NAtitle {
+        font-size: 14px;
+        text-align: left; /* Ensure title is left aligned */
+      }
+
+      .NAprice {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column; /* Stack the prices vertically */
+        line-height: 1; /* Set line-height to control spacing */
+      
+        .NAoriginal-priceee {
+          padding: 0;
+          margin-bottom: -15px;
+          font-size: 14px;
+        }
+
+        .NAdiscounted-priceee {
+          margin: 0;
+          padding: 0;
+
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .NAratings {
+    .NApaymentsimg {
+      text-align: left;
+
+      div.p02 {
+        font-size: 10px; /* Set font size to 10px */
+
+        display: flex;
+        align-items: center;
+      }
+
+      img.kokopay {
+        margin-top: 0px;
+        height: 15px;
+        width: 45px;
+      }
+    }
+  }
+}
+
+// Responsive Design
+// @media (max-width: 575.98px) {
+//   .container {
+//     width: 100%;
+//     margin-bottom: 80%;
+//   }
+
+//   .menNAmid {
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     margin: 0; /* Ensure there are no extra margins on the container */
+//   }
+
+//   .menNA {
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     width: 100%; /* Full width for the container */
+//   }
+
+//   .NAbox {
+//     margin-right: 5%;
+//     flex: 0 0 calc(40%); /* Adjust width for two items per row */
+//     margin-bottom: -25%; /* Reduced margin-bottom */
+//     width: calc(40%); /* Ensure it doesn't exceed half the container width */
+//   }
+
+//   .NAimgage img {
+//     width: 90%; /* Adjust the image width to 75% of the box */
+//     height: 90%; /* Adjust the image height to 75% of the box */
+//     border-radius: 10px; /* Maintain the border-radius */
+//   }
+
+//   .NAoverlay3 {
+//     display: none; /* Hide the overlay in mobile view */
+//   }
+
+//   .NAdiscount-percentage {
+//     position: absolute;
+//     margin-left: -32%;
+//     margin-top: -10%;
+//     transform: translateX(-30%);
+//     background-color: #efece9;
+//     border-radius: 5px;
+//     padding: 2px 4px; /* Further reduced padding */
+//     text-align: center;
+//     font-size: 8px; /* Further reduced font size */
+//     font-weight: bold;
+//     width: 20px; /* Further reduced width */
+//     color: #1d1919;
+//   }
+
+//   .NAsold-out-notice {
+//     position: absolute;
+//     margin-top: 25%;
+//     margin-left: 0%;
+//     transform: translateX(-30%);
+//     width: 40px; /* Further reduced width */
+//     background: rgba(255, 0, 0, 0.8);
+//     color: #fff;
+//     padding: 2px 4px; /* Further reduced padding */
+//     font-size: 8px; /* Further reduced font size */
+//     font-weight: bold;
+//     border-radius: 3px;
+//   }
+
+//   .NAinformations {
+//     width: 100%;
+//     margin-bottom: -20%;
+//     .NAtitle {
+//       width: 94%;
+//       margin-top: 3px;
+//       font-size: 12px; /* Reduced font size */
+//     }
+
+//     .NAprice {
+//       width: 78%;
+//       font-size: 12px; /* Reduced font size */
+//       font-weight: bold;
+//       text-align: left;
+//       margin-top: -3px;
+//       display: flex;
+//       align-items: baseline;
+//       flex-direction: column;
+//     }
+
+//     .NAoriginal-priceee {
+//       width: 100%;
+//       font-size: 18px; /* Adjusted font size */
+//       font-weight: bold;
+//       color: #000;
+//     }
+
+//     .NAdiscounted-priceee {
+//       font-size: 13px; /* Further reduced font size */
+//       color: #888;
+//       margin-bottom: 2px; /* Reduced margin */
+//       margin-top: -25%;
+//     }
+    
+//     .NAratings {
+//       width: 100%;
+//       text-align: left;
+
+//       .NApaymentsimg {
+//         display: flex;
+//         align-items: center;
+//         gap: 3px; /* Reduced gap */
+//         margin-bottom: -30%;
+//         img {
+//           margin-top: 1%;
+//           height: 15px; /* Reduced size */
+//           width: 30px; /* Reduced size */
+//         }
+//       }
+//     }
+//   }
+//   .spinner-containerrr{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh; // Full viewport height
+//   }
+
+//   .p02 {
+//     width: 100%;
+//     margin-bottom: 40%;
+//     font-size: 10px; /* Reduced font size */
+//   }
+// }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 100%;
+    margin-bottom: 40%;
+  }
+
+  .menNAmid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0; /* Ensure there are no extra margins on the container */
+  }
+
+  .menNA {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0; /* Ensure there are no extra margins on the container */
+    width: 100%; /* Full width for the container */
+  }
+
+  .NAbox {
+    margin-right: 2.5%;
+    margin-left: 3%;
+    flex: 0 0 calc(40%); /* Adjust width for two items per row */
+    margin-bottom: -25%; /* Reduced margin-bottom */
+  }
+
+  .NAimgage img {
+    margin-bottom: 10%;
+    width: 100%; /* Adjust the image width to 75% of the box */
+    height: 100%; /* Adjust the image height to 75% of the box */
+    border-radius: 10px; /* Maintain the border-radius */
+  }
+
+  .NAoverlay3 {
+    display: none; /* Hide the overlay in this view */
+  }
+
+  .NAdiscount-percentage {
+    position: absolute;
+    margin-left: -10%;
+    margin-top: -8%;
+    transform: translateX(-0%);
+    background-color: #efece9;
+    border-radius: 5px;
+    padding: 2px 4px; /* Further reduced padding */
+    text-align: center;
+    font-size: 8px; /* Further reduced font size */
+    font-weight: bold;
+    color: #1d1919;
+  }
+
+  .NAsold-out-notice {
+    position: absolute;
+    margin-top: -7%;
+    margin-left: 10%;
+    transform: translateX(-0%);
+    width: 40px; /* Further reduced width */
+    background: rgba(255, 0, 0, 0.8);
+    color: #fff;
+    padding: 2px 4px; /* Further reduced padding */
+    font-size: 12px; /* Further reduced font size */
+    font-weight: bold;
+    border-radius: 3px;
+  }
+
+  .NAinformations {
+    width: 100%;
+    margin-top: -10%;
+    .NAtitle {
+      width: 78%;
+      margin-top: 3px;
+      font-size: 12px; /* Reduced font size */
+    }
+
+    .NAprice {
+      width: 78%;
+      font-size: 12px; /* Reduced font size */
+      font-weight: bold;
+      text-align: left;
+      margin-top: -3px;
+      display: flex;
+      align-items: baseline;
+      flex-direction: column;
+    }
+
+    .NAoriginal-priceee {
+      width: 100%;
+      font-size: 18px; /* Adjusted font size */
+      font-weight: bold;
+      color: #000;
+    }
+
+    .NAdiscounted-priceee {
+      font-size: 13px; /* Further reduced font size */
+      color: #888;
+      margin-bottom: 2px; /* Reduced margin */
+      margin-top: -17%;
+    }
+    
+    .NAratings {
+      width: 78%;
+      text-align: left;
+
+      .NApaymentsimg {
+        display: flex;
+        align-items: center;
+        gap: 3px; /* Reduced gap */
+
+        img {
+          margin-bottom: 15%;
+          height: 15px; /* Reduced size */
+          width: 30px; /* Reduced size */
+        }
+      }
+    }
+  }
+  .spinner-containerrr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // Full viewport height
+  }
+  .p02 {
+    width: 100%;
+    margin-bottom: 50%;
+    font-size: 10px; /* Reduced font size */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 100%;
+    margin-bottom: 40%;
+  }
+
+  .menNAmid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0; /* Ensure there are no extra margins on the container */
+  }
+
+  .menNA {
+    margin-left: -10%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0; /* Ensure there are no extra margins on the container */
+    width: 100%; /* Full width for the container */
+  }
+
+  .NAbox {
+    margin-right: 0%;
+    flex: 0 0 calc(40%); /* Adjust width for two items per row */
+    margin-bottom: -23%; /* Reduced margin-bottom */
+    width: calc(40%); /* Ensure it doesn't exceed half the container width */
+  }
+
+  .NAimgage img {
+    margin-bottom: 10%;
+    width: 90%; /* Adjust the image width to 75% of the box */
+    height: 90%; /* Adjust the image height to 75% of the box */
+    border-radius: 10px; /* Maintain the border-radius */
+  }
+
+  .NAoverlay3 {
+    display: none; /* Hide the overlay in this view */
+  }
+
+  .NAdiscount-percentage {
+    position: absolute;
+    margin-left: 0%;
+    margin-top: -6%;
+    transform: translateX(-50%);
+    background-color: #efece9;
+    border-radius: 5px;
+    padding: 2px 4px; /* Further reduced padding */
+    text-align: center;
+    font-size: 8px; /* Further reduced font size */
+    font-weight: bold;
+    width: 20px; /* Further reduced width */
+    color: #1d1919;
+  }
+
+  .NAsold-out-notice {
+    position: absolute;
+    margin-top: -5%;
+    margin-left: 0%;
+    transform: translateX(-50%);
+    width: 40px; /* Further reduced width */
+    background: rgba(255, 0, 0, 0.8);
+    color: #fff;
+    padding: 2px 4px; /* Further reduced padding */
+    font-size: 8px; /* Further reduced font size */
+    font-weight: bold;
+    border-radius: 3px;
+  }
+
+  .NAinformations {
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 0;
+    margin-top: -10%;
+
+    .NAtitle {
+      width: 78%;
+      font-size: 12px; /* Reduced font size */
+    }
+
+    .NAprice {
+      width: 78%;
+      font-size: 12px; /* Reduced font size */
+      font-weight: bold;
+      text-align: left;
+      margin-top: -3px;
+      display: flex;
+      align-items: baseline;
+      flex-direction: column;
+    }
+
+    .NAoriginal-priceee {
+      width: 100%;
+      font-size: 18px; /* Adjusted font size */
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 5px;
+    }
+
+    .NAdiscounted-priceee {
+      font-size: 13px; /* Further reduced font size */
+      color: #888;
+      margin-bottom: 2px; /* Reduced margin */
+      margin-top: -15%;
+    }
+    
+    .NAratings {
+      width: 78%;
+      text-align: left;
+
+      .NApaymentsimg {
+        display: flex;
+        align-items: center;
+        gap: 3px; /* Reduced gap */
+        margin-bottom: 10px;
+
+        img {
+          margin-bottom: 15%;
+          height: 15px; /* Reduced size */
+          width: 30px; /* Reduced size */
+        }
+      }
+    }
+  }
+  .spinner-containerrr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // Full viewport height
+  }
+  .p02 {
+    width: 100%;
+    margin-bottom: 50%;
+    font-size: 10px; /* Reduced font size */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .NAoverlay3 {
+    display: none; /* Hide the overlay in mobile view */
+  }
+  .NAbox {
+    flex: 0 0 calc(25% - 20px);
+    margin-bottom: -25px;
+    width: 23%;
+    margin-left: 3%;
+  }
+  .menNA {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0; /* Ensure there are no extra margins on the container */
+    width: 100%; /* Full width for the container */
+  }
+  .NAdiscount-percentage {
+    position: absolute;
+    margin-left: -15%;
+    margin-top: 0%;
+    transform: translateX(-30%);
+    background-color: #efece9;
+    border-radius: 5px;
+    padding: 2px 4px; /* Further reduced padding */
+    text-align: center;
+    font-size: 8px; /* Further reduced font size */
+    font-weight: bold;
+    width: 20px; /* Further reduced width */
+    color: #1d1919;
+  }
+
+  .NAsold-out-notice {
+    position: absolute;
+    margin-top: 0%;
+    margin-left: 5%;
+    transform: translateX(-50%);
+    width: 40px; /* Further reduced width */
+    background: rgba(255, 0, 0, 0.8);
+    color: #fff;
+    padding: 2px 4px; /* Further reduced padding */
+    font-size: 8px; /* Further reduced font size */
+    font-weight: bold;
+    border-radius: 3px;
+  }
+
+  .NAimgage img {
+    margin-bottom: 10%;
+    width: 100%; /* Adjust the image width to 75% of the box */
+    height: 100%; /* Adjust the image height to 75% of the box */
+    border-radius: 10px; /* Maintain the border-radius */
+  }
+  .container {
+
+    .spinner-containerrr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh; // Full viewport height
+    }
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .NAoverlay3 {
+    display: none; /* Hide the overlay in mobile view */
+  }
+  .NAbox {
+    flex: 0 0 calc(20% - 20px);
+    margin-bottom: 20px;
+    width: 18%;
+  }
+  .spinner-containerrr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // Full viewport height
+  }
+}
+
+
+.container {
+
+  .spinner-containerrr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; // Full viewport height
+  }
+}

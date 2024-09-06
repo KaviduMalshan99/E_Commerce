@@ -1,0 +1,378 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.exfilter-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0F0E0E;
+  padding: 10px 20px; /* Adjusted padding to reduce space */
+
+
+  .exfilter-left {
+    margin: 0; /* Remove any extra margins */
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+
+    
+    .exfff {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 10px;
+
+      img {
+        height: 20px;
+        width: 20px;
+        margin-bottom: 10%; /* Removed bottom margin to reduce space */
+        margin-right: 5%;
+      }
+
+      label {
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+    }
+    
+    .exfilter {
+      position: relative;
+      margin-left: 20px;
+      
+      label {
+        font-size: 14px;
+        font-weight: bold;
+        color: #ecd3b5;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        
+        .fa-chevron-down {
+          margin-left: 5px;
+        }
+      }
+      
+      .exdropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #0F0E0E;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        width: 200px;
+        // border: 2px solid #FF5A00;
+        z-index: 10;
+        padding: 10px;
+
+        .exheader {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #A77025;
+
+          .exreset-label {
+            font-size: 12px;
+            color: #ff3c00;
+            cursor: pointer;
+          }
+        }
+
+        .exhorizontal-options {
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+
+          .exfd {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+
+            input {
+              margin-right: 0;
+            }
+
+            label {
+              width: 300%;
+              margin: 0;
+              font-size: 14px;
+              padding-bottom: 10px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .exfilter-right {
+    display: flex;
+    align-items: center;
+    padding-right: 5%;
+    
+    .exsearch-bar {
+      position: relative;
+
+      .exsearch-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #ecd3b5;
+        border-radius: 50%;
+        cursor: pointer;
+
+        .exfa-search {
+          color: #0F0E0E;
+          font-size: 16px;
+          width: 100%;
+        }
+      }
+
+      .exsearch-input {
+        position: absolute;
+        right: 65px;
+        top: 0;
+        width: 0;
+        opacity: 0;
+        transition: width 0.3s ease, opacity 0.3s ease;
+        border: 2px solid #ecd3b5;
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 0;
+        font-size: 14px;
+        background-color: #0F0E0E;
+        color: #ecd3b5;
+      }
+
+      &.active .exsearch-input {
+        width: 250px;
+        height: 40px;
+        opacity: 1;
+      }
+    }
+
+    .exsort-by {
+      margin-left: 20px;
+
+      label {
+        font-size: 14px;
+        margin-right: 10px;
+        font-weight: bold;
+      }
+
+      select {
+        padding: 5px;
+        border: 1px solid #ecd3b5;
+        border-radius: 4px;
+        background-color: #ecd3b5;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Adjust for screens between 1300px and 2000px */
+@media (min-width: 1300px) and (max-width: 2000px) {
+  .exfilter-section-container {
+    margin-top: -5%;
+    margin-bottom: -5%;
+    padding: 10px 20px; /* Reduce padding to avoid extra space */
+  }
+
+  .exfilter-left {
+    padding-left: 5%; /* Adjust padding */
+    padding-right: 5%; /* Adjust padding */
+  }
+  .exfilter-right {
+    display: flex;
+    align-items: center;
+    padding-right: 5%;
+    
+    .exsearch-bar {
+      position: relative;
+
+      &.active .exsearch-input {
+        width: 250px;
+        height: 40px;
+        opacity: 1;
+        margin-top: 28%;
+
+      }
+    }
+
+   
+  }
+}
+
+/* For < 991px - Vertical alignment of filters and other changes */
+@media (max-width: 990.98px) {
+  .exfilter-section-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    align-items: center;
+
+    .exfilter-left,
+    .exfilter-right {
+      display: flex;
+      align-items: center;
+      width: 48%;
+    }
+
+    .exfilter-left {
+      padding-left: 0;
+      margin: 0;
+      flex-direction: column;
+      padding-right: 25%;
+
+      .exfff {
+        justify-content: flex-start;
+
+        img {
+          margin-right: 10px;
+        }
+
+        label {
+          display: none;
+        }
+      }
+
+      .exfilter {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+
+        label {
+          display: block;
+          margin-bottom: 10px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .exdropdown {
+          position: relative;
+          top: 0;
+          left: 0;
+          box-shadow: none;
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #FF5A00;
+          border-radius: 15px;
+
+          .exheader {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+
+            .exreset-label {
+              font-size: 14px;
+            }
+          }
+
+          .exhorizontal-options {
+            display: flex;
+            flex-direction: column;
+
+            .exfd {
+              display: flex;
+              align-items: center;
+              margin-bottom: 10px;
+
+              input {
+                margin-right: 10px;
+              }
+
+              label {
+                margin-bottom: 5px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      &.exshow-filters {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color:rgb(27, 25, 25);
+        z-index: 20;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+    }
+
+    .exfilter-right {
+      margin: 0;
+      padding-right: 5%;
+      justify-content: flex-end;
+      align-items: center;
+
+
+      .exsearch-bar {
+        position: relative;
+        width: 100%;
+
+        .exsearch-input {
+          margin-right: 0;
+          flex-grow: 1;
+          margin-top: 0;
+          padding: 5px;
+          font-size: 14px;
+          border: 2px solid #ecd3b5;
+          border-radius: 14px;
+          background-color: #020202;
+          width: 100%;
+        }
+
+        &.active .exsearch-input {
+          width: 110%;
+          
+        }
+
+        .exclusive-search-icon {
+          position: absolute;
+          right: 0;
+        }
+
+      }
+    }
+  }
+}

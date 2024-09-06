@@ -1,0 +1,43 @@
+.main-containerorr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 20px;
+}
+
+.order-button {
+  width: 100%;
+  max-width: 100%; /* Maximum width of the buttons */
+  padding: 30px 40px 30px;
+  margin: 30px 0; /* Margin between the buttons */
+  background-color: #07223D;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  font-size: 19px;
+  text-transform: uppercase;
+  cursor:pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(176deg, rgba(2,0,36,1) 0%, rgba(6,6,121,1) 75%);
+    transform: scale(1.05); /* Sightly enlarge on hover */
+  }
+
+  &:active {
+    background: linear-gradient(176deg, rgba(2,0,36,1) 0%, rgba(6,6,121,1) 75%);
+    transform: scale(0.98); /* Slightly shrink on active */
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .order-button {
+    max-width: 100%; /* Reduce max-width for smaller screens */
+    padding: 12px 15px; /* Adjust padding for smaller screens */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}

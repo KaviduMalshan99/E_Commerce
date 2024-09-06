@@ -1,0 +1,162 @@
+/* .delay-order-popup {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 600px;
+  height: 98%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #000000;
+}
+
+.message-container {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #d9d9d9;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 600px;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.from-customer {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.from-admin {
+  background-color: #d1ecf1;
+  border-radius: 8px;
+  max-width: 70%;
+  margin-left: auto; 
+}
+
+.message-text {
+  padding: 5px;
+  background-color: #b7d011;
+  height: fit-content;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      border-radius: 10px;
+
+}
+
+
+
+.message-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.message-actions button {
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 0.8em;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.TextInput{
+    width: 100%;
+    border:1px solid #000000;
+    border-radius: 5px;
+}
+
+.buttonDelayOrder {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+    .massageEdit {
+      size: 40px;
+      padding: 15px 25px;
+      background-color: #d9d9d9;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+      border-radius: 10px;
+      background-image: url('../../assets/edit_icon.png');
+      background-size:contain;
+     
+      
+    }
+
+    .massageDelete {
+      
+      
+      background-color: #d9d9d9;
+      background-color: transparent;
+      color: #fff;
+      border:none;
+      cursor: pointer;
+      margin-left: 10px;
+      border-radius: 10px;
+      background-image: url('../../assets/delete_icon.png'); 
+      background-size:contain;
+      
+      
+      
+    }
+
+   
+    
+
+
+
+.message-text input {
+  background-color: white; 
+  height: auto;
+
+}
+
+.message-text input.edit-mode {
+  background-color: #b7d011; 
+  border: none;
+
+}
+    
+    
+   */

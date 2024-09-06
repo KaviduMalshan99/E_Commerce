@@ -1,0 +1,255 @@
+$color_1: white;
+$color_2: #fff;
+$background-color_1: #07223D;
+$background-color_2: #F7FBFE;
+$background-color_3: #cc3636;
+
+.Faq_main {
+  .Faqtable {
+    width: 99%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: $background-color_1;
+    border-radius: 10px;
+    th {
+      padding: 8px;
+      text-align: center;
+      background-color: $background-color_1;
+      color: $color_1;
+      border-radius: 10px 10px 0 0;
+    }
+    td {
+      padding: 8px;
+      text-align: center;
+      background-color: $background-color_2;
+      border: 1px solid #07223D;
+    }
+    .faq_theader1 {
+      width: 100px;
+    }
+    .faq_theader2 {
+      width: 100px;
+    }
+    .faq_theader3 {
+      width: 150px;
+    }
+    .faq_theader4 {
+      width: 150px;
+    }
+    .faq_theader5 {
+      width: 200px;
+    }
+    .faq_theader6 {
+      width: 200px;
+    }
+    .Faq_reply {
+      padding: 5px 15px;
+      width: 100px;
+      margin-right: 10px;
+      background-color: $background-color_1;
+      color: $color_2;
+      &:hover {
+        background-color: $background-color_2;
+        color: #07223D;
+        border: 1px solid;
+      }
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .Faq_delete {
+      padding: 5px 15px;
+      width: 100px;
+      background-color: $background-color_3;
+      color: $color_2;
+      &:hover {
+        background-color: $background-color_2;
+        color: red;
+        border: 1px solid;
+      }
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.confirm-dialog {
+  position: fixed;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5%;
+
+    &:first-child {
+      background-color: green;
+      color: white;
+      align-self: flex-start;
+    }
+
+    &:last-child {
+      background-color: red;
+      color: white;
+      align-self: flex-end;
+    }
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+}
+
+/* Extra Large Devices (Desktops) */
+@media (min-width: 1200px) {
+  .Faq_main {
+    .Faqtable {
+      th, td {
+        font-size: 1rem;
+      }
+    }
+    .confirm-dialog {
+      padding: 30px;
+      button {
+        padding: 15px 30px;
+      }
+    }
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (max-width: 1199px) {
+  .Faq_main {
+    .Faqtable {
+      width: 95%;
+      th, td {
+        font-size: 0.9rem;
+        padding: 6px;
+      }
+      .Faq_reply, .Faq_delete {
+        width: 80px;
+        padding: 4px 12px;
+      }
+    }
+    .confirm-dialog {
+      left: 55%;
+      button {
+        padding: 12px 24px;
+      }
+    }
+  }
+}
+
+/* Medium Devices (Tablets and Small Desktops) */
+@media (max-width: 992px) {
+  .Faq_main {
+    .Faqtable {
+      width: 90%;
+      th, td {
+        font-size: 0.85rem;
+        padding: 6px;
+      }
+      .Faq_reply, .Faq_delete {
+        width: 70px;
+        padding: 4px 10px;
+      }
+    }
+    .confirm-dialog {
+      left: 50%;
+      padding: 20px;
+      button {
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+
+/* Small Devices (Tablets) */
+@media (max-width: 768px) {
+  .Faq_main {
+    .Faqtable {
+      width: 85%;
+      th, td {
+        font-size: 0.8rem;
+        padding: 5px;
+      }
+      .Faq_reply, .Faq_delete {
+        width: 60px;
+        padding: 3px 8px;
+      }
+    }
+    .confirm-dialog {
+      padding: 15px;
+      button {
+        padding: 8px 16px;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 576px) {
+  .Faq_main {
+    .Faqtable {
+	  margin-right: 20px;
+      width: 80%;
+      th, td {
+        font-size: 0.75rem;
+        padding: 4px;
+      }
+      .Faq_reply, .Faq_delete {
+        width: 50px;
+        padding: 2px 6px;
+      }
+    }
+    .confirm-dialog {
+      width: 90%;
+      padding: 10px;
+      button {
+        padding: 6px 12px;
+      }
+    }
+  }
+}
+
+/* Very Small Devices (Small Phones) */
+@media (max-width: 360px) {
+  .Faq_main {
+    .Faqtable {
+      width: 75%;
+      th, td {
+        font-size: 0.7rem;
+        padding: 3px;
+      }
+      .Faq_reply, .Faq_delete {
+        width: 40px;
+        padding: 2px 4px;
+      }
+    }
+    .confirm-dialog {
+      width: 85%;
+      padding: 8px;
+      button {
+        padding: 5px 10px;
+      }
+    }
+  }
+}

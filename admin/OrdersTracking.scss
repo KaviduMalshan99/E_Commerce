@@ -1,0 +1,259 @@
+.orders-container {
+  display: flex;
+  flex-direction: column; // Change to column to stack elements vertically
+  width: 95%;
+  margin: 20px auto;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between; // Ensures space is distributed between the elements
+  margin-bottom: 20px; // Add some spacing between top and bottom sections
+}
+
+.left-panel {
+  width: 80%; // Adjusted width to 80%
+  overflow-y: auto;
+  max-height: 500px;
+  margin: 10px;
+}
+
+.right-panell {
+  width: 20%; // Adjusted width to 20%
+  overflow-y: auto;
+  max-height: 500px;
+  margin: 10px;
+
+}
+
+
+.orders-container {
+  h2 {
+      font-size: 18px;
+      padding-top: 20px;
+      border-radius: 10px 10px 0 0;
+
+  }
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+  }
+
+  th, td {
+      padding: 12px;
+      text-align: center;
+
+  }
+
+  th {
+      background-color: #07223d;
+      color: white;
+
+  }
+
+  td {
+      background-color: #f9f9f9;
+      border: 1px solid #07223d;
+      color: black;
+      height: 60px;
+  }
+}
+
+.order-checkbox {
+  width: 30px;
+  height: 30px;
+}
+
+.orders-container {
+  input[type="radio"] {
+      margin-right: 10px;
+      
+  }
+
+  .delete-btn, .edit-btn {
+      padding: 8px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+  }
+
+  .delete-btn {
+      background-color: red;
+  }
+
+  .edit-btn {
+      background-color: #07223d;
+  }
+}
+
+#OderTracking_Status_Update {
+  background-color: #f9f9f9;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 10px; // Adjust margin for alignment
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-right: 1%;
+  width: 700px;
+  height: fit-content;
+  padding-right: 10%;
+  padding-left: 4%;
+
+  h2 {
+      font-size: 1.6em;
+      color: #333;
+      margin-bottom: 15px;
+      text-align: center;
+  }
+
+  label {
+      display: flex;
+      flex-direction: floor($number: 0);
+      cursor: pointer;
+      padding-top: 15px;
+      font-size: 1.1rem;
+
+
+      &:hover {
+          color: #333;
+      }
+
+      input[type="radio"] {
+          margin: 0;
+          margin-left: 20px;
+          vertical-align: middle;
+          margin-top: 0%;
+          width: 40px;
+      }
+  }
+
+  input[type="radio"] {
+      accent-color: #007bff; // This sets the color of the radio buttons
+  }
+}
+
+#ordelete {
+  width: fit-content;
+  background-color: #ff0000;
+}
+
+#ordelete:hover {
+  background-color: #bc0d0d;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.right-panel {
+  width: 100%; // Adjusted width to 100% to utilize the entire space
+  overflow-y: auto; // Add overflow-y for vertical scrolling
+  max-height: 500px; // Set max height to enable scrolling when content exceeds this height
+  margin: 10px;
+  padding-top: 20px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: center;
+
+  }
+
+  th {
+    background-color: #07223d;
+    color: white;
+  }
+
+  td {
+    background-color: #f9f9f9;
+    border: 1px solid #07223d;
+    color: black;
+    height: 60px;
+
+  }
+}
+
+.revertbtn{
+  margin-left: 8%;
+  margin-top: 6%;
+}
+.revertbtn:hover{
+  background: linear-gradient(176deg, rgba(2,0,36,1) 0%, rgba(6,6,121,1) 75%);
+
+}
+
+#delivbtn{
+  width: fit-content;
+  background-color: #1751e4;
+}
+
+#delivbtn:hover{
+  background-color: #0838b1;
+
+}
+
+@media (max-width: 768px) {
+  .orders-container {
+    flex-direction: column;
+  }
+
+  .top-section {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panell {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  #OderTracking_Status_Update {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .bottom-section {
+    flex-direction: column;
+  }
+
+  .right-panel {
+    width: 100%;
+    max-height: none;
+    margin: 5px 0;
+  }
+
+  table {
+    th, td {
+      font-size: 12px;
+      padding: 8px;
+    }
+
+    th {
+      font-size: 14px;
+    }
+
+    td img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}

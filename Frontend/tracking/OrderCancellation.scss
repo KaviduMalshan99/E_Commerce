@@ -1,0 +1,198 @@
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#titleForCancellation {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+#popup-content {
+  width: fit-content;
+  height: 60%;
+  background-color: #eae7eb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.submitButton {
+  justify-content: flex-end;
+  margin-top: 10px;
+  background-color: black;
+  color: #fff;
+  padding: 3px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #ff3c00;
+}
+
+.deleteButton {
+  background-color: red;
+  color: #fff;
+  padding: 3px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #ff3c00;
+}
+
+.textbox {
+  width: 300px;
+  height: 30px;
+}
+
+#reasonForCancellation {
+  width: 100%;
+  height: 120px;
+  padding: 5px;
+}
+
+.tablepop {
+  width: 100%;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+#trpop {
+  padding-left: 40px;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 2%;
+}
+
+.tr {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+
+.table {
+  td {
+    border: 1px solid #d9d9d9;
+    padding: 8px;
+  }
+
+  th {
+    border: 1px solid #d9d9d9;
+    padding: 8px;
+    background-color: #d9d9d9;
+
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+
+  td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  #popup-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #titleForCancellation {
+    width: 100%;
+  }
+
+  .textbox {
+    width: 100%;
+  }
+
+  #reasonForCancellation {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .submitButton {
+    width: 100%;
+    padding: 10px;
+    margin-top: 60%;
+  }
+
+  .closeButton {
+    width: 100%;
+    padding: 10px;
+    margin-top: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  #popup-content {
+    width: 95%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .textbox {
+    width: 100%;
+    height: auto;
+  }
+
+  #reasonForCancellation {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+  }
+
+  .submitButton {
+    width: 60%;
+    padding: 12px;
+    margin: 5px auto 0; /* 5px for top margin, auto for left and right margins, 0 for bottom margin */
+    // display:flex; /* Make sure the button is a block element */
+    font-size: medium;
+  }
+  
+
+  .tablepop {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .table {
+    td,
+    th {
+      padding: 5px;
+    }
+  }
+
+  .deleteButton {
+    padding: 8px 10px;
+    width: 60%;
+    font-size: medium;
+
+  }
+}

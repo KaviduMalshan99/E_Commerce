@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+$font-family_1: 'Poppins', sans-serif;
+
+.shippinghead {
+    position: relative;
+    top: 180px; // Move it down by 100px
+}
+
+.shippingex1 {
+	font-family: $font-family_1;
+	font-size: 50px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+.shippingex2 {
+	font-family: $font-family_1;
+	font-weight: bold;
+	margin-left: 220px;
+	margin-top: 100px;
+}
+
+.shippingline {
+	font-family: $font-family_1;
+	font-size: inherit;
+	line-height: 2;
+	margin-top: 30px;
+}
+
+.shippingpara {
+	margin-right: 180px;
+	margin-left: 200px;
+    margin-bottom: 300px;
+}
+
+/* Extra Large Devices (Desktops) */
+@media (min-width: 1200px) {
+    // Specific styles for extra-large screens if necessary.
+}
+
+/* Large Devices (Desktops) */
+@media (max-width: 1199px) {
+    // Adjustments for large screens if necessary.
+}
+
+/* Medium Devices (Tablets and Small Desktops) */
+@media (max-width: 992px) {
+    .shippinghead {
+        top: 150px; // Reduce the top margin
+    }
+
+    .shippingex1 {
+        font-size: 40px; // Reduce font size for medium screens
+    }
+
+    .shippingex2 {
+        margin-left: 100px; // Adjust left margin
+        margin-top: 80px; // Adjust top margin
+    }
+
+    .shippingline {
+        line-height: 1.8; // Adjust line height
+        margin-top: 20px; // Adjust top margin
+    }
+
+    .shippingpara {
+        margin-right: 140px;
+        margin-left: 160px;
+        margin-bottom: 250px; // Adjust bottom margin
+    }
+}
+
+/* Small Devices (Tablets) */
+@media (max-width: 768px) {
+    .shippinghead {
+        top: 120px; // Further reduce the top margin
+    }
+
+    .shippingex1 {
+        font-size: 35px; // Further reduce font size
+    }
+
+    .shippingex2 {
+        margin-left: 140px;
+        margin-top: 60px;
+    }
+
+    .shippingline {
+        line-height: 1.6; // Adjust line height
+        margin-top: 15px;
+    }
+
+    .shippingpara {
+        margin-right: 120px;
+        margin-left: 130px;
+        margin-bottom: 200px;
+    }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 576px) {
+    .shippinghead {
+        top: 100px; // Further reduce the top margin
+    }
+
+    .shippingex1 {
+        font-size: 25px; // Further reduce font size
+    }
+
+    .shippingex2 {
+        margin-left: 40px;
+        margin-top: 40px;
+		font-size: 16px;
+    }
+
+    .shippingline {
+        line-height: 1.5; // Further adjust line height
+        margin-top: 10px;
+		font-size: 14px;
+    }
+
+    .shippingpara {
+        margin-right: 80px;
+        margin-left: 90px;
+        margin-bottom: 150px;
+    }
+}
+
+/* Very Small Devices (Small Phones) */
+@media (max-width: 360px) {
+    .shippinghead {
+        top: 60px; // Further reduce the top margin
+    }
+
+    .shippingex1 {
+        font-size: 25px; // Further reduce font size
+    }
+
+    .shippingex2 {
+        margin-left: 60px;
+        margin-top: 30px;
+    }
+
+    .shippingline {
+        line-height: 1.2; // Further adjust line height
+        margin-top: 5px;
+    }
+
+    .shippingpara {
+        margin-right: 40px;
+        margin-left: 50px;
+        margin-bottom: 100px;
+    }
+}
+
