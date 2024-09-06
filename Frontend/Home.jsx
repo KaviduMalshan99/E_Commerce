@@ -183,7 +183,7 @@ const Home = () => {
         </div>
 
         <div className="home-content">
-          <div className="home-newarrivals">
+         {/* <div className="home-newarrivals">
             <h4 className="home-h4m">New Arrivals</h4>
             <div className="home-imgplace">
               <NewArrivals />
@@ -191,7 +191,7 @@ const Home = () => {
             <Link to={"/newarrivalsmain"}>
               <label className="home-homemenlable1">View All</label>
             </Link>
-          </div>
+          </div>*/}
 
           <div className="home-sections-grid mobile-only">
             <Link to={"/MenShoes"} className="home-section">

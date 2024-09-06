@@ -298,7 +298,7 @@ const Dashboard = () => {
 
   return (
     <div className="mainContainer">
-      <Notification />
+      {/*<Notification />
 
       <div className="dashbordsec1">
         <div className="weldiv1">
@@ -397,7 +397,7 @@ const Dashboard = () => {
             <YAxis />
             <Tooltip />
             <Legend />
-            {/* Assuming categories are dynamically generated */}
+            {/* Assuming categories are dynamically generated 
             {Object.keys(salesData[0] || {}).map((category, index) => (
               <Area
                 key={index}
@@ -411,6 +411,7 @@ const Dashboard = () => {
           </AreaChart>
         </div>
       </div>
+      */}
     </div>
   );
 };

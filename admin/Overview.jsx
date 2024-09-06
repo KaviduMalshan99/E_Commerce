@@ -214,63 +214,7 @@ const Dashboard = () => {
 
   return (
     <div className="mainContainer">
-      <Notification />
-      <div className="dashbordsec1">
-        <div className="welcomeAdmin">
-          <div className="adminImage">
-            <img src={adminImageURL} alt="Admin" />
-          </div>
-          <div className="adminDetails">
-            <p className="p1">Welcome, {adminName}</p>
-            <p className="p2">Today is {todayDate}</p>
-          </div>
-        </div>
-        <div className="timenow">{currentTime}</div>
-      </div>
-      <div className="chartsdiv">
-        <div className="chart1" ref={ordersChartRef}>
-          <p>Orders Visualization</p>
-          {loading ? (
-            <p>Loading Orders data...</p>
-          ) : (
-            <>
-              <BarChart width={500} height={300} data={chartDatas}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="date" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="orders" fill="#8884d8" />
-              </BarChart>
-              <p>Weekly Total Orders = {totalWeeklyOrders}</p>
-            </>
-          )}
-          <button ref={ordersButtonRef} onClick={handleGenerateOrdersReport}>
-            Generate Report
-          </button>
-        </div>
-        <div className="chart2" ref={salesChartRef}>
-          <p>Sales Visualization</p>
-          {loading ? (
-            <p>Loading Sales data...</p>
-          ) : (
-            <>
-              <BarChart width={500} height={300} data={salesData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="date" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="totalSales" fill="#82ca9d" />
-              </BarChart>
-              <p>Weekly Revenue = Rs: {totalWeeklyRevenue.toFixed(2)}</p>
-            </>
-          )}
-          <button ref={salesButtonRef} onClick={handleGenerateSalesReport}>
-            Generate Report
-          </button>
-        </div>
-      </div>
+      
     </div>
   );
 };
