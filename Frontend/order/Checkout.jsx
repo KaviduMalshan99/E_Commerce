@@ -265,10 +265,10 @@ function Checkout() {
   };
 
   const handleExpandPayment = (method) => {
-    if (method === "cod") {
-      toast.error("Cash on Delivery is temporarily unavailable.");
-      return;
-    }
+    // if (method === "cod") {
+    //   toast.error("Cash on Delivery is temporarily unavailable.");
+    //   return;
+    // }
     setFormData((prevState) => ({
       ...prevState,
       paymentMethod: method,
