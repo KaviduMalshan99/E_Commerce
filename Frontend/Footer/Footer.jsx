@@ -27,8 +27,8 @@ function Footer() {
 
       <div className='ftmcon'>
         <div className='logoos'>
-          <img src={logoImage} alt="Well Worn Logo" className="logo" />
-          <label>Well Worn (Pvt) Ltd</label>
+          {/* <img src={logoImage} alt="Well Worn Logo" className="logo" /> */}
+          {/* <label>Well Worn (Pvt) Ltd</label> */}
         </div>
 
         <div className="collection">
@@ -56,14 +56,14 @@ function Footer() {
           <h3 onClick={toggleConnect}>CONNECT {window.innerWidth <= 820 && <span className="dropdown-icon">{isConnectOpen ? '▲' : '▼'}</span>}</h3>
           <ul className={isConnectOpen ? 'open' : ''}>
             <li><a href="#"><FontAwesomeIcon icon={faPhone} style={{ color: '#ffffff' }} /> +94 75 272 6993</a></li>
-            <li><a href="#"><FontAwesomeIcon icon={faEnvelope} style={{ color: '#ffffff' }} />  wellworn.fashion.lk@gmail.com</a></li>
-            <li><a href="https://wellworn.lk/"><FontAwesomeIcon icon={faGlobe} style={{ color: '#ffffff' }} /> www.wellworn.lk</a></li>
+            <li><a href="#"><FontAwesomeIcon icon={faEnvelope} style={{ color: '#ffffff' }} />  fashion.lk@gmail.com</a></li>
+            <li><a href="https://wellworn.lk/"><FontAwesomeIcon icon={faGlobe} style={{ color: '#ffffff' }} /> www.ishopping.lk</a></li>
           </ul>
         </div>
       </div>
 
       <div className="copyright">
-        © Well Worn 2024 | All rights reserved <br /> Developed by Elysian
+        {/* © Well Worn 2024 | All rights reserved <br /> Developed by Elysian */}
       </div>
     </footer>
   );
