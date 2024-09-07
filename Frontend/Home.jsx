@@ -8,7 +8,6 @@ import Slider from "./Slider";
 import HomeMen from "./Home/HomeMen";
 import HomeWomen from "./Home/HomeWomen";
 import NewArrivals from "./Home/NewArrivals";
-import Sections from "../src/assets/section.jpg";
 import Image1Hover from "../src/assets/Well Worn Men Shoe.png";
 import Image2Hover from "../src/assets/Well Worn Women Shoe.png";
 import Image3Hover from "../src/assets/Well Worn Women Bag.png";
@@ -183,7 +182,7 @@ const Home = () => {
         </div>
 
         <div className="home-content">
-         {/* <div className="home-newarrivals">
+          <div className="home-newarrivals">
             <h4 className="home-h4m">New Arrivals</h4>
             <div className="home-imgplace">
               <NewArrivals />
@@ -191,7 +190,7 @@ const Home = () => {
             <Link to={"/newarrivalsmain"}>
               <label className="home-homemenlable1">View All</label>
             </Link>
-          </div>*/}
+          </div>
 
           <div className="home-sections-grid mobile-only">
             <Link to={"/MenShoes"} className="home-section">

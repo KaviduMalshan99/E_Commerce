@@ -36,8 +36,8 @@ app.use((req, res, next) => {
 });
 
 // MongoDB Connection
-const uri = process.env.MONGO_URI || 'mongodb+srv://spmproject:123spmproject@spmproject.6y1hw.mongodb.net/?retryWrites=true&w=majority&appName=spmproject';
-
+const uri = process.env.MONGO_URI || 'mongodb+srv://spmproject:spmproject123@spmproject.6y1hw.mongodb.net/test?retryWrites=true&w=majority&appName=spmproject';
+//mongodb+srv://wellwornsl:wellwornsl123@wellwornsl.ytwnfha.mongodb.net/test?retryWrites=true&w=majority
 
 const connect = async () => {
   try {
