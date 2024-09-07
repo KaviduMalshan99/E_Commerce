@@ -379,17 +379,32 @@ const AddProductModel = ({ onClose }) => {
       <form>
         <div className="boxes">
           <div className="mainbox">
-            <div>
-              <label>1) Product ID:</label>
-              <input
-                type="text"
-                className="pid"
-                name="ProductId"
-                value={productData.ProductId}
-                onChange={handleChange}
-                placeholder="Enter Product Id"
-              />
-            </div>
+          <div>
+            <label>1) Product ID:</label>
+            <input
+              type="text"
+              className="pid"
+              name="ProductId"
+              value={productData.ProductId}
+              onChange={(e) => {
+                const inputValue = e.target.value;
+
+                // Ensure the input always starts with "P-"
+                if (!inputValue.startsWith("P-")) {
+                  handleChange({
+                    target: {
+                      name: "ProductId",
+                      value: `P-${inputValue}`,
+                    },
+                  });
+                } else {
+                  handleChange(e); // If already has "P-", just update normally
+                }
+              }}
+              placeholder="Enter Product Id"
+            />
+          </div>
+
             <div>
               <label>2 ) Product Name:(*)</label>
               <input
@@ -476,15 +491,7 @@ const AddProductModel = ({ onClose }) => {
                   />
                   New Arrival
                 </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="Exclusive"
-                    checked={productData.Categories.includes("Exclusive")}
-                    onChange={() => handleCategoryChange("Exclusive")}
-                  />
-                  Exclusive
-                </label>
+                
               </div>
             </div>
           </div>
@@ -509,14 +516,14 @@ const AddProductModel = ({ onClose }) => {
               {/* Render sections dynamically based on selected variant */}
               {productData.VariantType === "Many Sizes with Many Colors" && (
                 <div className="mz1">
-                  <label> Many Sizes with Many Colors:</label>
+                  <label>  Sizes </label>
                   <div className="mzdiv">
                     <label>Add Size:</label>
                     <input
                       type="text"
                       value={sizeInput}
                       onChange={(e) => setSizeInput(e.target.value)}
-                      placeholder="Enter Size"
+                      placeholder="Enter size if available"
                     />
                     <label>Select Color:</label>
                     <input

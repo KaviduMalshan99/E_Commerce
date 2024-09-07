@@ -8,7 +8,6 @@ import Slider from "./Slider";
 import HomeMen from "./Home/HomeMen";
 import HomeWomen from "./Home/HomeWomen";
 import NewArrivals from "./Home/NewArrivals";
-import Sections from "../src/assets/section.jpg";
 import Image1Hover from "../src/assets/Well Worn Men Shoe.png";
 import Image2Hover from "../src/assets/Well Worn Women Shoe.png";
 import Image3Hover from "../src/assets/Well Worn Women Bag.png";

@@ -139,7 +139,7 @@ const Header = () => {
                             </div>
                         </div>
                     </li>
-                    <li><Link to='/exclusive' className="exclusive-link">Exclusive</Link></li>
+                    <li><Link to='/exclusive' className="exclusive-link"></Link></li>
                 </ul>
             </div>
 
