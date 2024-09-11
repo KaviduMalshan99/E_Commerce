@@ -87,7 +87,7 @@ const Header = () => {
     return (
         <div className="header-main">
             <div className="header-left">
-                <Link to={'/'}><img src={Logo} alt="Logo" className="header-logo" /></Link>
+                {/* <Link to={'/'}><img src={Logo} alt="Logo" className="header-logo" /></Link> */}
             </div>
 
             <div className="header-center">
@@ -139,7 +139,7 @@ const Header = () => {
                             </div>
                         </div>
                     </li>
-                    <li><Link to='/exclusive' className="exclusive-link">Exclusive</Link></li>
+                    <li><Link to='/exclusive' className="exclusive-link"></Link></li>
                 </ul>
             </div>
 

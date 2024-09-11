@@ -104,7 +104,7 @@ const Product = () => {
 
   return (
     <div className="ProductContainer">
-      <Notification />
+      
       <div className="productsecondiv">
         <h1 className="PRODUCTTITLE">Products Section</h1>
 

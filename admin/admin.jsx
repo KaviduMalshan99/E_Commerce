@@ -22,7 +22,7 @@ const Admin = () => {
     <div className="admin-container">
       <div className={`nav-bar ${isSidePanelOpen ? 'open' : ''}`}>
         <div className="company-logo">
-          <img src={Logo} alt="Wellworn Logo" />
+          {/* <img src={Logo} alt="Wellworn Logo" /> */}
         </div>
         <div className="navlinks">
           <Link
