@@ -10,7 +10,7 @@ import Subbscribe from '../Frontend/Subbscribe';
 
 
 // Frontend components
-
+import ChatbotComponent from '../Frontend/chat/ChatbotComponent'; // Import the Chatbot component
 import Men from '../Frontend/Men';
 import Women from '../Frontend/Women';
 import Best from '../Frontend/Best';
@@ -137,6 +137,7 @@ function App() {
               <Route path="/reset-password" element={<ResetPassword />} />
               <Route path='/profilee' element={<UserP />} ></Route>
               <Route path='/' element={<Home />} />
+              <Route path='/chat' element={<ChatbotComponent />} />
               <Route path='/men' element={<Men />} />
               <Route path='/women' element={<Women />} />
               <Route path='/exclusive' element={<Exclusive />} />

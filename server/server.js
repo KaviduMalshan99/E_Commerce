@@ -6,6 +6,7 @@ const multer = require('multer');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const admin = require("firebase-admin");
+const { chatbot } = require('./ChatbotController'); // New import from ChatbotController
 const router = require('./router');
 
 // Firebase Admin Initialization
@@ -124,9 +125,15 @@ app.post('/auth/google', async (req, res) => {
 });
 
 
-
 // Apply Routes
 app.use('/api', router);
+
+// Add the Chatbot route
+app.post('/api/chat', chatbot);  // Route for AI Chat Interface
+
+app.use(cors({
+  origin: 'http://localhost:5173' // Add your frontend URL (Vite dev server) here
+}));
 
 // Start Server
 const PORT = process.env.PORT || 3001;

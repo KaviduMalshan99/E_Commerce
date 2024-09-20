@@ -21,6 +21,7 @@ const RefundController = require("./RefundController");
 const SupplierRegController = require("./SupplierRegController");
 const SupplierStockController = require("./SupplierStockController");
 const dispatchedOrderController = require("./DispatchedOrdersController");
+const { chatbot } = require('./ChatbotController'); // Import chatbot controller
 
 const CurrentStockController = require("./CurrentStockController");
 const {
@@ -286,5 +287,8 @@ router.put("/tracking/revert/:orderId", trackingController.reverseStatus);
 
 router.get("/orders", orderContraller.getOrders);
 router.post("/orders", orderContraller.addOrder);
+
+// Chatbot route
+router.post('/chat', chatbot); // AI Chatbot route
 
 module.exports = router;
