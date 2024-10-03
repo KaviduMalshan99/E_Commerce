@@ -34,6 +34,7 @@ import Sidep from '../Frontend/user/UserPSide'
 
 
 import Admin from '../admin/admin';
+import LiveSupportDashboard from '../admin/chat/LiveSupportDashboard'; // Import the live support component
 import Dashboard from '../admin/Dashboard';
 import Profile from '../admin/Profile';
 import Categories from '../admin/Categories';
@@ -228,6 +229,7 @@ function App() {
               element={<PrivateRoute permissionLevel={[USER_ROLES.ADMIN]} />}
             >
              <Route path='/admin' element={<Admin />} >
+             <Route path="live-support" element={<LiveSupportDashboard/>} />
              <Route path='addadmin' element={<AddAdmin />} />
               <Route path='dashboard' element={<Dashboard />} />
               <Route path='profile' element={<Profile />} />

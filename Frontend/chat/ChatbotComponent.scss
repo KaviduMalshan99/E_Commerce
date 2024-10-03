@@ -1,3 +1,4 @@
+/* Container for the entire chatbot */
 .chatbot-container {
   width: 100vw;
   height: 100vh;
@@ -5,6 +6,7 @@
   justify-content: center;
   align-items: center;
   background-color: grey;
+  padding: 20px;
 }
 
 .chatbox {
@@ -15,84 +17,55 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  background-color: black;
-  border-radius: 10px;
+  background-color: #000000;
+  border-radius: 15px; /* Smooth border for a modern look */
   color: white;
 }
 
+/* Messages container */
 .chatbot-messages {
   flex-grow: 1;
   overflow-y: auto;
   padding-right: 10px;
+  margin-bottom: 20px;
 }
 
+/* Message styling for user and chatbot */
 .message {
   margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
 .message.user {
-  background-color: #ff3c00;
+  background-color: #ff3c00; /* User message background */
+  color: white;
   text-align: right;
 }
 
 .message.chatbot {
-  background-color: white;
+  background-color: #ffffff; /* Chatbot message background */
   color: black;
   text-align: left;
 }
 
-.user-query-section {
+.product-recommendations {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.user-input {
-  width: 100%;
-  height: 50px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: white;
-  color: black;
-  font-size: 1rem;
-}
-
-.send-btn {
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 0 auto;
-  position: relative;
-  display: block;
-}
-
-.send-btn:hover {
-  background-color: #ff3c00;
-}
-
-.products-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Ensure products don't wrap */
+  overflow-x: auto; /* Allow horizontal scrolling if products overflow */
+  padding: 10px 0; /* Add padding between products and the container */
 }
 
 .product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  margin: 20px;
+  flex: 0 0 30%; /* Ensure each product card takes up 30% of the width */
+  max-width: 50px;
+  min-width: 200px;
   background-color: #333;
   padding: 10px;
   border-radius: 10px;
   position: relative;
+  margin-top: 50px;
 }
 
 .product-image-wrapper {
@@ -127,15 +100,19 @@
 }
 
 .product-name {
+
   padding-top: 10px;
   margin: 0;
   font-weight: bold;
   color: white;
+
 }
 
 .product-price {
   font-size: 1.2rem;
   margin-top: 0px;
+  color: white;
+  justify-content: center;
 }
 
 .product-description {
@@ -157,9 +134,204 @@
   background-color: #ff3c00;
 }
 
+/* Styling for the user input section */
+.user-query-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: auto;
+}
+
+.image-preview {
+  position: absolute;
+  top: -60px; /* Position it above the search bar */
+  left: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  z-index: 1; /* Ensure it's on top */
+}
+.preview-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+/* Remove button positioned as a small circle on top of the image */
+.remove-image-btn {
+  position: absolute;
+  top: 0px;
+  right: -15px;
+  background-color: red;
+  border: none;
+  color: white;
+  width: 0px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.remove-image-btn:hover {
+  background-color: darkred;
+}
+
+/* Input section contains image upload, text input, and send button */
+.input-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.uploaded-image-preview{
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
+;
+}
+/* Image upload label and icon */
+.image-upload-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px 10px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a modern look */
+}
+.image-upload-btn {
+  margin-bottom: -2px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+
+}
+
+.upload-icon img {
+  width: 30px;
+  height: 30px
+}
+.file-input{
+  display: none;
+}
+.image-upload-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.288); /* Add subtle overlay */
+}
+
+
+
+.user-input {
+
+  flex: 1; /* This makes the input field take up the remaining space */
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 10;
+  margin-bottom: -20px;
+  outline: none;
+  color: black;
+}
+
+
+.send-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  margin-left: 10px; /* Add some spacing between the search bar and send button */
+}
+
+
+.send-btn:hover {
+  background-color: #ff3c00;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10%;
+}
+.send-btn .loading {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+.loading {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.products-list {
+  display: flex;
+  gap: 20px; /* Spacing between product cards */
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile responsiveness */
 @media screen and (max-width: 768px) {
+  .chatbox {
+    max-width: 100%;
+    padding: 10px;
+  }
+
   .products-list {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    gap: 20px; /* Spacing between product cards */
+  }
+  .user-input {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .send-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .image-upload-icon {
+    font-size: 20px;
   }
 }
