@@ -35,7 +35,7 @@ const generalQueries = {
         message: "You can contact us through the details below:",
         contact: {
             phone: "Phone: 075 272 6993",
-            email: "Email: wellworn@gmail.com"
+            email: "Email: contact@gmail.com"
         }
     },
     privacy: {
@@ -107,35 +107,39 @@ const chatbot = async (req, res) => {
         if (isSessionResolved(sessionId)) {
             delete liveSupportSessions[sessionId]; // Reset the live support session
         }
-
         // Check if the query should be transferred to live support
         if (shouldTransferToLiveSupport(userQuery)) {
-            // Mark the session as active for live support
-            liveSupportSessions[sessionId] = { active: true, userSocketId: socketId };
+            // Check if the session is already active for live support
+            if (!liveSupportSessions[sessionId]?.active) {
+                liveSupportSessions[sessionId] = { active: true, userSocketId: socketId };
 
-            // Transfer the query to live support
-            await axios.post('http://localhost:3001/api/live-support/transfer', {
-                userQuery,
-                userId: sessionId,  // Use sessionId as userId here
-                sessionId
-            });
+                // Send the transfer request to live support
+                await axios.post('http://localhost:3001/api/live-support/transfer', {
+                    userQuery,
+                    userId: sessionId,
+                    sessionId
+                });
 
-            // Emit the user query to the live support dashboard through Socket.IO
-            req.app.get('socketio').emit('forwardUserMessageToAgent', { sessionId, message: userQuery });
+                // Emit user query to live support dashboard
+                req.app.get('socketio').emit('forwardUserMessageToAgent', { sessionId, message: userQuery });
 
-            return res.json({
-                message: "Transferring you to a live support agent...",
-                requireLiveSupport: true
-            });
-        } else if (liveSupportSessions[sessionId] && liveSupportSessions[sessionId].active) {
-            // Prevent the chatbot from echoing user queries during live support
+                // Inform the frontend that live support is being activated
+                return res.json({
+                    message: "Your query has been transferred to a live support agent.",
+                    requireLiveSupport: true
+                });
+            }
+
+            // If already transferred to live support, don't echo back the user query
+            return res.json({ message: "Message forwarded to the live agent." });
+        } else if (liveSupportSessions[sessionId]?.active) {
+            // If live support is already active, forward the user's query to the live agent
             await axios.post('http://localhost:3001/api/live-support/transfer', {
                 userQuery,
                 userId: sessionId,
                 sessionId
             });
 
-            // Emit the user query to the live support dashboard through Socket.IO
             req.app.get('socketio').emit('forwardUserMessageToAgent', { sessionId, message: userQuery });
 
             return res.json({
@@ -143,12 +147,13 @@ const chatbot = async (req, res) => {
             });
         }
 
-        // Handle regular chatbot interactions (non-live support)
+        // Handle non-live support queries (chatbot logic)
         const generalQueryType = matchGeneralQuery(userQuery);
 
         if (generalQueryType) {
             const generalResponse = generalQueries[generalQueryType];
 
+            // Structure the response for general queries
             if (generalResponse.link) {
                 return res.json({
                     message: generalResponse.message,

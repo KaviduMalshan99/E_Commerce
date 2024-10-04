@@ -3,10 +3,8 @@ const router = express.Router();
 
 // Temporary storage for live support queries
 let liveSupportQueue = [];
-
-// API to transfer query to live support
 router.post('/transfer', (req, res) => {
-    const { userQuery, userId, sessionId } = req.body;
+    const { userQuery, userId, sessionId, userSocketId } = req.body; // Capture userSocketId
 
     // Check if a live support session already exists for this sessionId
     const existingSession = liveSupportQueue.find((session) => session.sessionId === sessionId);
@@ -14,6 +12,11 @@ router.post('/transfer', (req, res) => {
     if (existingSession) {
         // If session exists, append the new message to its messages array
         existingSession.messages.push({ sender: 'user', text: userQuery });
+
+        // Emit the message to the live agent
+        req.app.get('socketio').emit('receiveMessageFromUser', { sessionId, message: userQuery });
+
+        return res.status(200).json({ message: 'Message forwarded to live agent' });
     } else {
         // Create a new session if it doesn't exist
         liveSupportQueue.push({
@@ -22,32 +25,39 @@ router.post('/transfer', (req, res) => {
             userQuery,
             status: 'pending',
             transferredAt: new Date(),
+            userSocketId, // Store userSocketId for real-time updates
             messages: [{ sender: 'user', text: userQuery }]
         });
-    }
 
-    console.log('Query transferred to live support:', userQuery, sessionId);
-    return res.status(200).json({ message: 'Query transferred to live support' });
+        // Emit the new session creation event and message to the live agent
+        req.app.get('socketio').emit('receiveMessageFromUser', { sessionId, message: userQuery });
+
+        console.log('Query transferred to live support:', userQuery, sessionId);
+        return res.status(200).json({ message: 'Query transferred to live support' });
+    }
 });
+
 
 
 router.post('/forward', (req, res) => {
     const { userQuery, sessionId } = req.body;
-  
+
     // Ensure the session exists in the liveSupportQueue
     const session = liveSupportQueue.find(query => query.sessionId === sessionId);
     if (session) {
-      session.messages.push({ sender: 'user', text: userQuery });
-  
-      // Emit to the live support dashboard using the socket
-      req.app.get('socketio').emit('receiveMessageFromUser', { sessionId, message: userQuery });
-      
-      return res.status(200).json({ message: 'Message forwarded to live agent' });
+        session.messages.push({ sender: 'user', text: userQuery });
+
+        // Emit to the live support dashboard using the socket
+        req.app.get('socketio').emit('receiveMessageFromUser', { sessionId, message: userQuery });
+
+        return res.status(200).json({ message: 'Message forwarded to live agent' });
     }
-  
+
     return res.status(404).json({ error: 'Session not found' });
-  });
-  
+});
+
+
+
 
 // API for live agents to fetch unresolved queries and chat history
 router.get('/unresolved', (req, res) => {
@@ -56,7 +66,6 @@ router.get('/unresolved', (req, res) => {
     res.status(200).json(unresolvedQueries);
 });
 
-// API for live agents to respond to queries
 router.post('/respond', (req, res) => {
     const { sessionId, response } = req.body;
 
@@ -74,6 +83,8 @@ router.post('/respond', (req, res) => {
 
     return res.status(404).json({ error: 'Unresolved query not found' });
 });
+
+
 
 // API to resolve live support session
 router.post('/resolve', (req, res) => {

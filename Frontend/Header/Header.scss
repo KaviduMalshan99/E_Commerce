@@ -48,6 +48,69 @@ $dropdown-bg-color: #000000; /* Dark orange for dropdown background */
   font-family: "Kaisei HarunoUmi";
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.chatbot-link {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  text-decoration: none;
+  position: relative;
+  background: linear-gradient(270deg, #ff3c00, #ff6a00);
+  background-size: 200% 200%;
+  animation: gradient-slide 4s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+    color: transparent;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+
+  .chatbot-icon {
+    margin-right: 8px;
+    font-size: 1.5rem; /* Adjust the icon size */
+    color: #ff3c00;
+  }
+
+  &:hover {
+    color: #ff6a00; /* Orange hover color */
+  }
+
+  &:before {
+    content: 'New';
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    background-color: #ff3c00;
+    color: white;
+    padding: 2px 5px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    animation: pulsate 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes gradient-slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 .header-left {
   padding-left: 5%;

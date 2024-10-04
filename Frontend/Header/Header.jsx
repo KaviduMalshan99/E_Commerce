@@ -11,7 +11,7 @@ import cartimg from '../../src/assets/cart.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../src/store/useAuthStore';
 import { useState, useEffect, useRef } from 'react';
-import { FaAngleDown, FaAngleLeft } from 'react-icons/fa';
+import { FaAngleDown, FaAngleLeft, FaRobot } from 'react-icons/fa'; // Add the FaRobot import here
 const Header = () => {
     const { cartItems } = useCart();
     const numberOfDistinctProducts = cartItems.length;
@@ -140,7 +140,13 @@ const Header = () => {
                             </div>
                         </div>
                     </li>
-                    <li><Link to='/exclusive' className="exclusive-link"></Link></li>
+                    {/* Chatbot Link - New AI Feature */}
+                    <li>
+                        <Link to='/chat' className="nav-linkk chatbot-link">
+                            <FaRobot className="chatbot-icon" />
+                            <span className="chatbot-text">FashionBot</span>
+                        </Link>
+                    </li>
                 </ul>
             </div>
 

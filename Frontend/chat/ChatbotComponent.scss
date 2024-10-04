@@ -1,54 +1,188 @@
 /* Container for the entire chatbot */
 .chatbot-container {
+  margin-top: 4.5%;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  position: relative;
   padding: 20px;
+
+
+}
+/* Container for the entire chatbot page */
+.chatbot-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Adjust the positioning */
+  height: 100vh;
+  position: relative;
 }
 
+/* Gradient title styling */
+.chatbot-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(-45deg, #ff3c00, #000000, #ff3c00, #000000);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 10%;  /* Move it above the chatbot */
+  z-index: 2; /* Ensures it stays on top */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.chatbot-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire area */
+  z-index: -1; /* Place the video behind other content */
+}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire viewport */
+  z-index: -1; /* Sends the video to the background */
+}
+
+/* Main app content, ensuring it sits above the video */
+.app-container {
+  position: relative;
+  z-index: 1; /* Ensure content stays above the video */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the live agent messages */
+.agent-message {
+  background-color: #f0f0ff; /* Light background for agent messages */
+  color: #333; /* Dark text for readability */
+  border-left: 4px solid #3333cc; /* Left border for emphasis */
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  font-weight: bold;
+}
 .chatbox {
   width: 100%;
   max-width: 1200px;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
   background-color: #000000;
-  border-radius: 15px; /* Smooth border for a modern look */
+  border-radius: 15px;
   color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border: 10px solid transparent;
+  background-clip: padding-box;
+}
+/* Border item shared styles */
+.corner-item {
+  position: absolute;
+  width: 80px; /* Reduced width for each image */
+  height: auto;
+  z-index: 3; /* Place the images above the background */
 }
 
+/* Top-left corner image */
+.top-left-corner {
+  top: -40px;
+  left: -40px;
+  transform: rotate(10deg); /* Slight rotation for a dynamic look */
+}
+
+/* Top-right corner image */
+.top-right-corner {
+  top: -40px;
+  right: -40px;
+  transform: rotate(-10deg);
+}
+
+/* Bottom-left corner image */
+.bottom-left-corner {
+  bottom: -40px;
+  left: -40px;
+  transform: rotate(8deg);
+}
+
+/* Bottom-right corner image */
+.bottom-right-corner {
+  bottom: -40px;
+  right: -40px;
+  transform: rotate(-8deg);
+}
 /* Messages container */
 .chatbot-messages {
   flex-grow: 1;
   overflow-y: auto;
   padding-right: 10px;
   margin-bottom: 20px;
+  max-height: 70vh;
 }
-
-/* Message styling for user and chatbot */
+/* General message style */
 .message {
   margin: 10px 0;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   font-size: 1rem;
+  max-width: 100%; /* Restrict max-width to fit nicely */
+  word-wrap: break-word; /* Ensure long text wraps within the message box */
+  line-height: 1.4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to make it pop */
 }
-
+/* User messages - right aligned with unique colors */
 .message.user {
-  background-color: #ff3c00; /* User message background */
+  background-color: #ff3c00; /* Fashion-themed color for user */
   color: white;
+  align-self: flex-end;
   text-align: right;
+  margin-left: 20%;
+
+  border-bottom-right-radius: 0; /* Rounded corners except bottom-right */
 }
 
+/* Chatbot messages - left aligned with softer colors */
 .message.chatbot {
-  background-color: #ffffff; /* Chatbot message background */
+  background-color: #f5f5f5; /* Soft background for chatbot messages */
   color: black;
+  align-self: flex-start;
+  margin-right: 20%;
   text-align: left;
+  border-bottom-left-radius: 0; /* Rounded corners except bottom-left */
 }
+
 
 .product-recommendations {
   display: flex;
@@ -100,29 +234,33 @@
 }
 
 .product-name {
-
   padding-top: 10px;
   margin: 0;
   font-weight: bold;
   color: white;
-
+  text-align: center; /* Center align the product name */
+  font-size: 1.1rem; /* Slightly increased font size for better readability */
 }
 
 .product-price {
   font-size: 1.2rem;
-  margin-top: 0px;
+  margin-top: 5px; /* Added some margin for spacing */
   color: white;
-  justify-content: center;
+  text-align: left; /* Left-align the product price */
+  font-weight: 600; /* Increased font weight for emphasis */
 }
 
 .product-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: lightgray;
+  text-align: left; /* Left-align the product description */
+  margin-top: 3px; /* Added margin to separate from the price */
 }
+
 
 .view-product-btn {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 5px;
   padding: 10px;
   background-color: black;
   color: white;
@@ -133,6 +271,39 @@
 .view-product-btn:hover {
   background-color: #ff3c00;
 }
+/* Button for links like refund, privacy, etc. */
+.view-link-btn {
+  background-color: #000000;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 20%;
+}
+
+.view-link-btn:hover {
+  background-color: #ff3c00;
+}
+
+.view-link-btn:active {
+  background-color: #cc3b00;
+}
+
+a {
+  text-decoration: none;
+}
+/* Contact information styles */
+.contact-info {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
 
 /* Styling for the user input section */
 .user-query-section {
@@ -140,7 +311,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-top: auto;
 }
 
 .image-preview {
@@ -154,6 +324,7 @@
   z-index: 1; /* Ensure it's on top */
 }
 .preview-image {
+  margin: 10px;
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -165,12 +336,12 @@
 .remove-image-btn {
   position: absolute;
   top: 0px;
-  right: -15px;
-  background-color: red;
+  right: -25px;
+  background-color: transparent; /* Make the background transparent */
   border: none;
   color: white;
-  width: 0px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -180,9 +351,15 @@
 }
 
 .remove-image-btn:hover {
-  background-color: darkred;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(255, 0, 0, 0); /* Slight background change on hover */
 }
-
+/* Close icon inside the remove button */
+.close-icon {
+  width: 18px;
+  height: 18px;
+}
 /* Input section contains image upload, text input, and send button */
 .input-section {
   display: flex;
@@ -213,8 +390,8 @@
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for a modern look */
 }
+/* Tooltip on hover for the image upload button */
 .image-upload-btn {
-  margin-bottom: -2px;
   position: relative;
   width: 50px;
   height: 50px;
@@ -224,17 +401,19 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-right: 10px;
-
 }
+
+
 
 .upload-icon img {
   width: 30px;
-  height: 30px
+  height: 30px;
 }
-.file-input{
+
+.file-input {
   display: none;
 }
+
 .image-upload-btn::after {
   content: '';
   position: absolute;
@@ -285,8 +464,8 @@
   margin-bottom: 10%;
 }
 .send-btn .loading {
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top: 2px solid #fff;
+  border: 2px solid#ff3c00;
+  border-top: 2px solid #000000;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -295,7 +474,7 @@
 .loading {
   width: 24px;
   height: 24px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.3);
   border-top: 2px solid white;
   border-radius: 50%;
   animation: spin 1s linear infinite;
