@@ -4,13 +4,16 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { CheckoutProvider } from '../Frontend/order/CheckoutContext';  // Adjust the path as necessary
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { useAuthStore } from './store/useAuthStore';
+import videoSrc from './assets/chatbot_vid.mp4'; // Correct path relative to App.jsx
+
+
 
 import Subbscribe from '../Frontend/Subbscribe';
 
 
 
 // Frontend components
-
+import ChatbotComponent from '../Frontend/chat/ChatbotComponent'; // Import the Chatbot component
 import Men from '../Frontend/Men';
 import Women from '../Frontend/Women';
 import Best from '../Frontend/Best';
@@ -34,6 +37,7 @@ import Sidep from '../Frontend/user/UserPSide'
 
 
 import Admin from '../admin/admin';
+import LiveSupportDashboard from '../admin/chat/LiveSupportDashboard'; // Import the live support component
 import Dashboard from '../admin/Dashboard';
 import Profile from '../admin/Profile';
 import Categories from '../admin/Categories';
@@ -111,6 +115,16 @@ function App() {
 
 
   return (
+    <>
+      {/* Conditionally render the background video only for the /chat page */}
+      {location.pathname === '/chat' && (
+        <div className="chatbot-app-container"> {/* Chatbot-specific app container */}
+          <video autoPlay loop muted className="background-video">
+            <source src={videoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      )}
     <GoogleOAuthProvider clientId="169065311100-teurpru54dqmh09mb5er3tc473n7fob1.apps.googleusercontent.com">
     <QueryClientProvider client={queryClient}>
     {showPopup && <Subbscribe onClose={() => setShowPopup(false)} />}
@@ -137,6 +151,7 @@ function App() {
               <Route path="/reset-password" element={<ResetPassword />} />
               <Route path='/profilee' element={<UserP />} ></Route>
               <Route path='/' element={<Home />} />
+              <Route path='/chat' element={<ChatbotComponent />} />
               <Route path='/men' element={<Men />} />
               <Route path='/women' element={<Women />} />
               <Route path='/exclusive' element={<Exclusive />} />
@@ -227,6 +242,7 @@ function App() {
               element={<PrivateRoute permissionLevel={[USER_ROLES.ADMIN]} />}
             >
              <Route path='/admin' element={<Admin />} >
+             <Route path="live-support" element={<LiveSupportDashboard/>} />
              <Route path='addadmin' element={<AddAdmin />} />
               <Route path='dashboard' element={<Dashboard />} />
               <Route path='profile' element={<Profile />} />
@@ -293,6 +309,7 @@ function App() {
       </CartProvider>
     </QueryClientProvider>
     </GoogleOAuthProvider>
+    </>
   );
 }
 
