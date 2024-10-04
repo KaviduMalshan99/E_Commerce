@@ -29,7 +29,11 @@ $dropdown-bg-color: #000000; /* Dark orange for dropdown background */
   margin: 0;
   font-family: "Kaisei HarunoUmi", serif;
 }
-
+.header-logo{
+  width: 75px;
+  height: 70px;
+  background-color: #584c4c00;
+}
 .header-main {
   display: flex;
   justify-content: space-between;

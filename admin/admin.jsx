@@ -33,6 +33,13 @@ const Admin = () => {
             <i className='fas fa-tachometer-alt' /> Dashboard
           </Link>
           <Link
+            to="/admin/live-support"
+            className={`nav-link ${selectedSection === 'live-support' && 'active'}`}
+            onClick={() => handleSectionChange('live-support')}
+          >
+            <i className='fas fa-message' /> Live Chat
+          </Link>
+          <Link
             to="/admin/profile"
             className={`nav-link ${selectedSection === 'profile' && 'active'}`}
             onClick={() => handleSectionChange('profile')}

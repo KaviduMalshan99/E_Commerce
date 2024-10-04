@@ -1,5 +1,7 @@
 import './Header.scss';
-import Logo from '../../src/assets/logo.png';
+import Logo from '../../src/assets/1-removebg-preview.png';
+import Logo1 from '../../src/assets/Black and White Circle Business Logo.png';
+import Logo2 from '../../src/assets/Black_and_White_Circle_Business_Logo-removebg-preview11.png';
 import { useCart } from '../CartContext';
 import Menbag from '../../src/assets/menbag.png';
 import MenShoe from '../../src/assets/Menshoe.png';
@@ -10,7 +12,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../src/store/useAuthStore';
 import { useState, useEffect, useRef } from 'react';
 import { FaAngleDown, FaAngleLeft } from 'react-icons/fa';
-
+Black_and_White_Circle_Business_Logo-removebg-preview
 const Header = () => {
     const { cartItems } = useCart();
     const numberOfDistinctProducts = cartItems.length;
@@ -87,7 +89,7 @@ const Header = () => {
     return (
         <div className="header-main">
             <div className="header-left">
-                {/* <Link to={'/'}><img src={Logo} alt="Logo" className="header-logo" /></Link> */}
+                <Link to={'/'}><img src={Logo2} alt="Logo" className="header-logo" /></Link>
             </div>
 
             <div className="header-center">
