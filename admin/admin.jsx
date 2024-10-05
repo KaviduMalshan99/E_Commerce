@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import './admin.scss'; // Use .scss for better styling
 import Logo from '../src/assets/logo.png';
+import Logo2 from '../src/assets/Black_and_White_Circle_Business_Logo-removebg-preview11.png';
 
 
 
@@ -22,7 +23,7 @@ const Admin = () => {
     <div className="admin-container">
       <div className={`nav-bar ${isSidePanelOpen ? 'open' : ''}`}>
         <div className="company-logo">
-          {/* <img src={Logo} alt="Wellworn Logo" /> */}
+          <img src={Logo2} alt="Wellworn Logo" /> 
         </div>
         <div className="navlinks">
           <Link
@@ -88,13 +89,7 @@ const Admin = () => {
           >
             <i className='fas fa-question-circle' /> FAQ
           </Link>
-          <Link
-            to="/admin/overview"
-            className={`nav-link ${selectedSection === 'overview' && 'active'}`}
-            onClick={() => handleSectionChange('overview')}
-          >
-            <i className='fas fa-chart-simple' /> Overview
-          </Link>
+          
         </div>
       </div>
       <div className="content-area">
