@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
+  // align-items: center; /* Center content horizontally */
 
   .page-title {
     color: #ff3c00; /* Updated font color */
@@ -49,7 +49,7 @@ body {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-
+width: 100%;
     .order-info {
       color: #fb5909; /* Global font color */
 
@@ -90,7 +90,7 @@ body {
           .product-info {
             color: #fb5909; /* Global font color */
             margin-right: 20px;
-            padding: 10px;
+            padding: 30px;
             text-align: center;
 
             @media (min-width: 601px) {
@@ -103,7 +103,7 @@ body {
 
             .product-name {
               font-weight: bold;
-              margin-bottom: 10px;
+              margin-bottom: 0px;
             }
 
             .product-quantity,
@@ -118,9 +118,9 @@ body {
               color: white; /* Button font color */
               border: none;
               border-radius: 10px;
-              padding: 10px 20px;
+              padding: 5px 0px;
               width: 150px;
-              margin-top: 10px;
+              margin: 0px;
               cursor: pointer;
 
               &:hover {
@@ -163,6 +163,12 @@ body {
           right: 20px;
         }
 
+        .tracking-button,
+        .cancelorderbtn {
+ 
+          margin-bottom: 21px;
+
+        }
         .revieww,
         .tracking-button,
         .cancelorderbtn {
@@ -170,9 +176,9 @@ body {
           color: white; /* Button font color */
           border: none;
           border-radius: 10px;
-          padding: 10px 20px;
+          padding: 5px 0px;
           width: 80px;
-          margin-top: 10px;
+          margin-top: 0px;
           cursor: pointer;
 
           &:hover {
@@ -300,7 +306,6 @@ body {
   .orders-list {
 
     .order-card {
-
       .order-content {
         flex-direction: column;
         align-items: center;
@@ -322,7 +327,7 @@ body {
 
           .tracking-button {
             width: 150px; /* Same width as review button */
-            margin-top: 10px;
+            margin-top: -20px;
           }
         }
       }
