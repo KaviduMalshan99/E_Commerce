@@ -12,6 +12,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../src/store/useAuthStore';
 import { useState, useEffect, useRef } from 'react';
 import { FaAngleDown, FaAngleLeft, FaRobot } from 'react-icons/fa'; // Add the FaRobot import here
+
 const Header = () => {
     const { cartItems } = useCart();
     const numberOfDistinctProducts = cartItems.length;

@@ -1,461 +1,51 @@
-$color_1: #f0f0f0;
-$color_2: #fff;
-$color_3: #007bff;
-$color_4: #000;
-$color_5: white;
-$background-color_1: #f5f5f5;
-$background-color_2: #07223D;
-$background-color_3: #555;
-$background-color_4: #777;
-$background-color_5: #28a745;
-$background-color_6: #dc3545;
-$background-color_7: #007bff;
-$border-right-color_1: #fff;
-$border-left-color_1: #fff;
-
-/* Calendar */
-.welcomeAdmin {
-	display: flex;
-	align-items: center;
-	background-color: $background-color_1;
-	width: 100%;
-	height: 30%;
-	padding-right: 15px;
-	border-radius: 10px;
-	gap: 5px;
-	margin-top: 20px;
-	.adminImage {
-		img {
-			height: 80px;
-			width: 80px;
-			border-radius: 50%;
-			padding: 15px;
-			object-fit: cover;
-		}
-	}
-	.adminDetails {
-		display: flex;
-		flex-direction: column;
-		gap: -10px;
-		.p1 {
-			font-size: 16px;
-			font-weight: bold;
-		}
-		.p2 {
-			font-size: 15px;
-		}
-	}
+.dashboard {
+    padding: 20px;
+    h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
 }
 
-.conversionRates {
-	margin-top: 20px;
-	background-color: $background-color_1;
-	padding: 10px;
-	border-radius: 10px;
-	width: 100%;
-	height: 48%;
-	h2 {
-		font-size: 18px;
-		font-weight: bold;
-		margin-bottom: 10px;
-		margin-top: -10px;
-	}
-	ul {
-		list-style: none;
-		padding: 0;
-		display: flex;
-		gap: 15px;
-		margin-left: 20px;
-		div {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 5px;
-			border-radius: 10px;
-			background-color: $background-color_1;
-			margin-bottom: 5px;
-			width: 80px;
-			height: 80px;
-			border-radius: 50%;
-			align-items: center;
-			text-align: center;
-			margin-top: 10px;
-			li {
-				font-size: 16px;
-				color: $color_1;
-				&:first-child {
-					font-weight: bold;
-				}
-			}
-			&:nth-child(1) {
-				background-color: $background-color_2;
-			}
-			&:nth-child(2) {
-				background-color: $background-color_3;
-			}
-			&:nth-child(3) {
-				background-color: $background-color_4;
-			}
-		}
-	}
+.widgets {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
-.pp1 {
-	margin-top: 10px;
-	font-size: 15px;
-}
-.calendertime {
-	display: flex;
-	flex-direction: column;
-	background-color: $background-color_1;
-	margin-top: 20px;
-	border-radius: 10px;
-	width: 32%;
-	align-items: center;
-	height: fit-content;
-	.timenow {
-		font-size: 18px;
-		font-weight: bold;
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-	.calendertoday {
-		border-radius: 10px;
-		margin-bottom: 23px;
-	}
-}
-.react-calendar {
-	width: 100%;
-	max-width: 300px;
-	background-color: $background-color_1;
-	border-radius: 10px;
-	border: 1px solid #ccc;
-}
-.react-calendar__tile--active {
-	background-color: $background-color_2;
-	color: $color_2;
-	&:enabled {
-		&:hover {
-			background: #007bff;
-		}
-		&:focus {
-			background: #007bff;
-		}
-	}
-}
-.react-calendar__tile--now {
-	background-color: $background-color_5;
-	color: $color_2;
-	&:enabled {
-		&:hover {
-			background: #28a745;
-		}
-		&:focus {
-			background: #28a745;
-		}
-	}
-}
-.react-calendar__tile--hover {
-	background-color: $background-color_6;
-	color: $color_2;
-	&:enabled {
-		&:hover {
-			background: #dc3545;
-		}
-		&:focus {
-			background: #dc3545;
-		}
-	}
-}
-.react-calendar__month-view__weekdays {
-	text-align: center;
-}
-.react-calendar__month-view__weekdays__weekday {
-	color: $color_3;
-}
-.react-calendar__month-view__days__day {
-	color: $color_4;
-}
-.react-calendar__navigation {
-	background-color: $background-color_2;
-	border-radius: 10px 10px 0 0;
-}
-.react-calendar__navigation__label {
-	color: $color_2;
-	font-size: 12px;
-}
-.react-calendar__navigation__arrow {
-	color: $color_2;
-	font-size: 15px;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	font-size: 15px;
-}
-.react-calendar__navigation__prev2-button {
-	border-left-color: $border-left-color_1;
-	border-right-color: $border-right-color_1;
-	font-size: 18px;
-}
-.react-calendar__navigation__next2-button {
-	border-left-color: $border-left-color_1;
-	border-right-color: $border-right-color_1;
-	font-size: 18px;
-}
-.dashbordsec1 {
-	width: 98%;
-	display: flex;
-	justify-content: space-between;
-	i {
-		font-size: 25px;
-		margin-top: 10px;
-		margin-bottom: 20px;
-	}
-}
-.weldivsec1 {
-	display: flex;
-	background-color: $background-color_1;
-	justify-content: space-between;
-	border-radius: 10px;
-	width: 350px;
-	height: 160px;
-	padding: 10px;
-	margin-top: 20px;
-	gap: 20px;
-	.ordercount {
-		background-color: $background-color_7;
-		color: $color_5;
-		border-radius: 10px;
-		margin-bottom: 10px;
-		padding: 10px;
-		width: 45%;
-		height: 140px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.totalorders {
-		background-color: $background-color_2;
-		color: $color_5;
-		border-radius: 10px;
-		padding: 10px;
-		width: 45%;
-		height: 140px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-}
-.ordercount {
-	h2 {
-		font-size: 18px;
-	}
-}
-.totalorders {
-	h2 {
-		font-size: 18px;
-	}
-}
-.weldiv2 {
-	display: flex;
-	background-color: $background-color_1;
-	justify-content: space-between;
-	border-radius: 10px;
-	width: 350px;
-	height: 160px;
-	padding: 10px;
-	margin-top: 10px;
-	gap: 20px;
-	.usercount {
-		background-color: $background-color_2;
-		color: $color_5;
-		border-radius: 10px;
-		margin-bottom: 10px;
-		padding: 10px;
-		width: 45%;
-		height: 140px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.Todayrevenue {
-		background-color: $background-color_5;
-		color: $color_5;
-		border-radius: 10px;
-		padding: 10px;
-		width: 45%;
-		height: 140px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-}
-.usercount {
-	h2 {
-		font-size: 18px;
-	}
-}
-.weldiv1 {
-	.welp {
-		font-size: 20px;
-		font-weight: bold;
-	}
-	h6 {
-		font-size: 15px;
-	}
-}
-.chartsdiv {
-	display: flex;
-	gap: 5%;
-	margin-top: 20px;
-	margin-left: -5%;
-}
-.chart1 {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	padding: 20px;
-	background-color: $background-color_1;
-	border-radius: 8px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-	width: 48%;
-	p {
-		font-size: 18px;
-		font-weight: bold;
-		margin-bottom: 10px;
-	}
-	.recharts-wrapper {
-		margin-top: 20px;
-		margin-top: 20px;
-	}
-}
-.chart2 {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	padding: 20px 20px 20px 40px;
-	background-color: $background-color_1;
-	border-radius: 8px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-	width: 60%;
-	p {
-		font-size: 18px;
-		font-weight: bold;
-		margin-bottom: 10px;
-	}
 
-	
+.widget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f3f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 23%;  // Adjust width for 4 widgets
 }
-@media (max-width: 1350px) {
-	.welcomeAdmin{
-		width: 97%;
-		padding-top:10px ;
-		padding-right: 5px;
 
-		.adminDetails{
-			.p1{
-				font-size: 14px;
-			}
-			.p2{
-				font-size: 13px;
-			}
-		}
-	}
+.widget .title {
+    font-size: 16px;
+    color: #555;
+}
 
-	.conversionRates{
-		width: 97%;
-		h2{
-			font-size: 16px;
-		}
-		ul{
-			margin-left: 5px;
-		}
-	}
+.widget .value {
+    font-size: 24px;
+    font-weight: bold;
+}
 
-	.react-calendar{
-		width: 95%;
-		max-width: 350px;
-	}
-	.calendertime{
-		width: 35%;
-	}
+.widget .right img {
+    width: 40px;
+    height: 40px;
+}
 
-	.weldiv1{
-		width: 300px;
-	}
-
-	.weldivsec1{
-		width: 300px;
-		height: 140px;
-
-		.ordercount{
-			height: 115px;
-
-			h6{
-				font-size: 13px;
-				margin-top: -10px;
-			}
-			.welp{
-				font-size: 15px;
-			}
-		}
-
-		.totalorders{
-			height: 115px;
-
-			h6{
-				font-size: 13px;
-				margin-top: -10px;
-			}
-			.welp{
-				font-size: 15px;
-			}
-		}
-	}
-
-
-	.weldiv2{
-		width: 300px;
-		height: 140px;
-
-		.usercount{
-			height: 115px;
-
-			h6{
-				font-size: 13px;
-				margin-top: -10px;
-			}
-			.welp{
-				font-size: 15px;
-			}
-		}
-
-		.Todayrevenue{
-			height: 115px;
-
-			h6{
-				font-size: 13px;
-				margin-top: -10px;
-			}
-			.welp{
-				font-size: 15px;
-			}
-		}
-	}
-
-	.chart1{
-		width: 80%;
-	}
-
-	.chart2{
-		width: 450px;
-
-		.recharts-wrapper{
-			.recharts-surface{
-				width: 20px;
-				height: 10px;
-				padding-right: 100px;
-			}
-		}
-
-		
-	}
-
-	
+.charts {
+    margin-top: 40px;
+    h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 }
