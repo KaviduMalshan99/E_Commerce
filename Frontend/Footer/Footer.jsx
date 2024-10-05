@@ -4,6 +4,8 @@ import logoImage from './wellwornlogo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import Logo2 from '../../src/assets/Black_and_White_Circle_Business_Logo-removebg-preview11.png';
+
 
 function Footer() {
   const [isCollectionOpen, setCollectionOpen] = useState(false);
@@ -27,7 +29,7 @@ function Footer() {
 
       <div className='ftmcon'>
         <div className='logoos'>
-          {/* <img src={logoImage} alt="Well Worn Logo" className="logo" /> */}
+          <img src={Logo2} alt="Well Worn Logo" style={{width:'130px', height:'130px', marginTop:'15%'}} className="logo" />
           {/* <label>Well Worn (Pvt) Ltd</label> */}
         </div>
 
