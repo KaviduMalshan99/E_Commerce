@@ -97,7 +97,7 @@ const contactus = () => {
             <br />
             Stride with Confidence
             <br />
-            Contact Well-Worn
+            Contact EVO-TREND
             <br />
             Today!
           </h1>
