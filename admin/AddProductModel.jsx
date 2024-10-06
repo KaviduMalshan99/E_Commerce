@@ -390,7 +390,7 @@ const AddProductModel = ({ onClose }) => {
                 const inputValue = e.target.value;
 
                 // Ensure the input always starts with "P-"
-                if (!inputValue.startsWith("P-")) {
+                if (!inputValue.startsWith("P")) {
                   handleChange({
                     target: {
                       name: "ProductId",
